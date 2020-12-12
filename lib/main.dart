@@ -23,7 +23,7 @@ class splashPage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
-            child: Image.asset("assets/mohlogo.png"),
+            child: Image.asset("assets/mohlogo.png", height: 140,),
           ),
         ],
         mainAxisAlignment: MainAxisAlignment.center,
