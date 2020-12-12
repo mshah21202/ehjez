@@ -11,19 +11,19 @@ class splashPage extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 160, 0, 25),
+            padding: const EdgeInsets.fromLTRB(0, 100, 0, 45),
             child: Image.asset("assets/Ehjez-Logo.png", width: 270,),
           ),
           Divider(
             height: 1,
-            color: Colors.white, 
-            thickness: 2, 
-            indent: 50, 
+            color: Colors.white,
+            thickness: 2,
+            indent: 50,
             endIndent: 50,
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
-            child: Image.asset("assets/mohlogo.png", height: 140,),
+            padding: const EdgeInsets.fromLTRB(0, 45, 0, 0),
+            child: Image.asset("assets/mohlogo.png", height: 160,),
           ),
         ],
         mainAxisAlignment: MainAxisAlignment.center,
