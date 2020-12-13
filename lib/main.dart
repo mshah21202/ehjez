@@ -1,4 +1,4 @@
-import 'package:ehjez/mainscreen.dart';
+import 'package:ehjez/mainpage.dart';
 import 'package:flutter/material.dart';
 import 'package:ehjez/splashScreen.dart';
 
