@@ -17,34 +17,43 @@ class mainscreen extends StatelessWidget {
                   elevation: 0.0,
                   backgroundColor: Colors.grey[900].withOpacity(0.33),
                 ),
-                body: new Container(
-
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.bottomLeft,
-                        end: Alignment.topRight,
-                        colors: [
-                          Color.fromRGBO(31, 112, 138, 1),
-                          Color.fromRGBO(64, 162, 117, 1)
+                body: Center(
+                  child: new Container(
+                      width: double.infinity,
+                      height: double.infinity,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomLeft,
+                          end: Alignment.topRight,
+                          colors: [
+                            Color.fromRGBO(31, 112, 138, 1),
+                            Color.fromRGBO(64, 162, 117, 1)
+                          ],
+                        ),),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 90, 40, 0) ,
+                            child: Text(
+                              '                                                              احجز \nلحماية أسرتك',
+                              textAlign: TextAlign.right,
+                              style: TextStyle(
+                                  fontSize: 40.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontFamily: "ElMessiri"
+                              ),
+                            ),
+                          ),
                         ],
-                      ),),
-                    child: Container(alignment: Alignment(0.9, -0.8),
-                      child: Text(
-                        '                                                              احجز                لحماية أسرتك',
-                        textAlign: TextAlign.right,
-                        style: TextStyle(
-                            fontSize: 50.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white
-                        ),
-                      ),
-
-
-                    )
+                      )
+                  ),
                 ),
               )
               ],
-            )));
+            )
+        )
+    );
   }
 
 
