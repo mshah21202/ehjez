@@ -25,7 +25,7 @@ class mainscreen extends StatelessWidget {
                      colors: [Color.fromRGBO(31, 112, 138, 1), Color.fromRGBO(64,162,117, 1)],
                  ),),
              child:Center(
-             child: Text(' احجز لحماية أسرتك', style: TextStyle(fontSize:54.0),
+             child: Text(' احجز \n لحماية أسرتك', style: TextStyle(fontSize:54.0, color: Colors.white, fontFamily: "Roboto"), textDirection: TextDirection.rtl,
              )  ),
                alignment: Alignment.topRight,
 
