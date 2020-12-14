@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:ehjez/splashScreen.dart';
 import 'package:ehjez/ReservationScreen.dart';
 import 'package:ehjez/infoscreen.dart';
-import 'package:ehjez/mainscreen.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute: '/splash',

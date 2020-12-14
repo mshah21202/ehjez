@@ -32,7 +32,7 @@ class mainscreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    height: 700,
+                    height: 500,
                   ),
                 ),
                   Center(
@@ -45,7 +45,7 @@ class mainscreen extends StatelessWidget {
                         gradient: LinearGradient(
                           begin: Alignment.bottomLeft,
                           end: Alignment.topRight,
-                          stops: [0.4,0.6,0.8,1.0],
+                          stops: [0.45,0.7,0.9,1.0],
                           colors: [
                             Color.fromRGBO(31, 112, 138, 1),
                             Color.fromRGBO(31, 112, 138, 0.5),
