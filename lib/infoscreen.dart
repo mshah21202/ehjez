@@ -1,12 +1,12 @@
-import 'package:ehjez/Reservation%20Screen.dart';
+import 'package:ehjez/ReservationScreen.dart';
 import 'package:flutter/material.dart';
 
 
 class infoscreen  extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Container(
+    return Scaffold(
+        body: Container(
     child: Center(
     child: new Container(
     width: double.infinity,

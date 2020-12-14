@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 class Reservationscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-     return MaterialApp(
-      home: Container(
+     return Scaffold(
+      body: Container(
         child: Center(
           child: new Container(
             width: double.infinity,
