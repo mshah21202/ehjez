@@ -1,4 +1,5 @@
 import 'package:ehjez/Reservation%20Screen.dart';
+import 'package:ehjez/infoscreen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -48,7 +49,7 @@ class mainscreen extends StatelessWidget {
                           ),
 
 
-                         Container(
+                        Container(
                               child: GestureDetector(
                                   onTap: () {
                                     Navigator.push(
@@ -56,10 +57,12 @@ class mainscreen extends StatelessWidget {
                                       MaterialPageRoute(
                                         builder: (context){
                                           return Reservationscreen();
-                                        },),);} ),
+                                        },),);}
 
 
-                            child:  Padding(
+
+
+                              ,child: Padding(
                             padding: const EdgeInsets.only(top: 80),
                                 child: Container(
                                   padding: EdgeInsets.symmetric(
@@ -80,9 +83,21 @@ class mainscreen extends StatelessWidget {
                                 )
                                 ),
                           ),
+              ),
+
+                    Container(
+                      child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context){
+                                  return infoscreen();
+                                },),);}
 
 
-                    Container(child: Padding(
+
+                        ,child: Padding(
                 padding: const EdgeInsets.only(bottom: 200),
                   child: Container(
                     padding: EdgeInsets.symmetric(
@@ -102,7 +117,7 @@ class mainscreen extends StatelessWidget {
 
                         ]
                     ),
-
+                  ),
               ),
 
 
