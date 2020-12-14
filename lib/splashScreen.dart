@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:ehjez/mainpage.dart';
 import 'package:flutter/material.dart';
 
 class splashPage extends StatefulWidget {
@@ -7,11 +8,17 @@ class splashPage extends StatefulWidget {
 }
 
 class _splashPageState extends State<splashPage> {
+void completed(){
+Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>mainscreen()));
+
+}
+
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 5), () => Navigator.pushNamed(context, '/'));
+    Timer(Duration(seconds: 5), completed);
   }
 
   @override
