@@ -2,12 +2,16 @@ import 'package:ehjez/ReservationScreen.dart';
 import 'package:ehjez/infoscreen.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
-
+import 'package:flutter/services.dart';
 
 
 class mainscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return MaterialApp(
         home: Container(
             child: Stack(
@@ -116,7 +120,7 @@ class mainscreen extends StatelessWidget {
                                                 color: Color.fromRGBO(46,168,172, 1),
                                                 fontFamily: "ElMessiri")
                                         ),
-                                        onPressed: () {Navigator.pushNamed(context, '/reserve');},
+                                        onPressed: () {Navigator.pushNamed(context, '/info');},
                                         color: Colors.white,
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(20),
