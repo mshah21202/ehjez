@@ -43,7 +43,7 @@ class Reservationscreen extends StatelessWidget {
                 child: ButtonTheme(shape: RoundedRectangleBorder(
                   borderRadius: BorderRadiusDirectional.circular(20)
                 ),
-                  child: RaisedButton(onPressed: () {}, color: Color.fromRGBO(46,168,172, 1),
+                  child: RaisedButton(onPressed: () {Navigator.pushNamed(context, '/survey');}, color: Color.fromRGBO(46,168,172, 1),
                     child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                       Text("طلب جديد", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),),
                       Padding(

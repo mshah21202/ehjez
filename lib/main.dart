@@ -1,4 +1,5 @@
 import 'package:ehjez/mainpage.dart';
+import 'package:ehjez/surveyPage.dart';
 import 'package:flutter/material.dart';
 import 'package:ehjez/splashScreen.dart';
 import 'package:ehjez/ReservationScreen.dart';
@@ -11,6 +12,7 @@ void main() => runApp(MaterialApp(
     '/': (context) => mainscreen(),
     '/reserve': (context) => Reservationscreen(),
     '/info': (context) => infoscreen(),
+    '/survey': (context) => surveyPage(),
   },
 ));
 
