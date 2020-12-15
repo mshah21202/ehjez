@@ -7,11 +7,14 @@ class splashPage extends StatefulWidget {
   _splashPageState createState() => _splashPageState();
 }
 
-class _splashPageState extends State<splashPage> {
-void completed(){
-Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>mainscreen()));
-
-}
+     class _splashPageState extends State<splashPage> {
+         void completed(){
+             Navigator.of(context).pushReplacement(
+                 MaterialPageRoute(
+                     builder: (context)=>mainscreen()
+                 )
+             );
+         }
 
 
   @override
