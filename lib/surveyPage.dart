@@ -16,6 +16,7 @@ class _surveyPageState extends State<surveyPage> {
     setState(() {
       groupValue = e;
       if (groupValue == 3) {
+        var label = "test";
         // Change National ID to Passport No./Residency No.
       } else if(groupValue == 2){
         // Change Passport No./Residency No. to National ID
@@ -89,6 +90,44 @@ class _surveyPageState extends State<surveyPage> {
                     ),
                   )],
                 ),
+              ),
+              Stack(
+                children: [Padding(
+                  padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
+                  child: TextField(textAlign: TextAlign.end,
+                    showCursor: false,
+                    style: TextStyle(height: 3, color: Colors.white),
+                    decoration: new InputDecoration(
+                        border: new OutlineInputBorder(borderSide: BorderSide(width: 0, style: BorderStyle.none),
+                          borderRadius: BorderRadius.circular(10.0)
+                        ),
+                        focusedBorder: new OutlineInputBorder(borderSide: BorderSide(width: 0, style: BorderStyle.none),
+                            borderRadius: BorderRadius.circular(10.0)
+                        ),
+                        enabledBorder: new OutlineInputBorder(borderSide: BorderSide(width: 0, style: BorderStyle.none),
+                            borderRadius: BorderRadius.circular(10.0)
+                        ),
+                        errorBorder: new OutlineInputBorder(borderSide: BorderSide(width: 0, style: BorderStyle.none),
+                            borderRadius: BorderRadius.circular(10.0)
+                        ),
+                        disabledBorder: new OutlineInputBorder(borderSide: BorderSide(width: 0, style: BorderStyle.none),
+                            borderRadius: BorderRadius.circular(10.0)
+                        ),
+                        contentPadding: EdgeInsets.fromLTRB(0, 10, 15, 10),
+                        fillColor: Colors.grey[600].withOpacity(0.3),
+                        filled: true,
+                    )
+                    ,),
+                ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 2, 60, 0),
+                    child: Row(mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text("الإسم", style: TextStyle(color: Colors.white.withOpacity(0.5), fontWeight: FontWeight.w100),),
+                      ],
+                    ),
+                  )
+                ]
               )
             ],
           )
