@@ -60,18 +60,22 @@ class mainscreen extends StatelessWidget {
                       ),
                       child: Column(
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 40, 30, 0),
-                              child: Text(
-                                '                                                              احجز \nلحماية أسرتك',
-                                textAlign: TextAlign.right,
-                                style: TextStyle(
-                                    fontSize: 40.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                    fontFamily: "ElMessiri"
+                            Row(mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(0, 120, 30, 0),
+                                  child: Text(
+                                    'احجز \nلحماية أسرتك',
+                                    textAlign: TextAlign.right,
+                                    style: TextStyle(
+                                        fontSize: 40.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        fontFamily: "ElMessiri"
+                                    ),
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
                             Padding(
                               padding: const EdgeInsets.fromLTRB(30, 120, 30, 0),
