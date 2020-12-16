@@ -22,31 +22,43 @@ class infoscreen  extends StatelessWidget {
     Color.fromRGBO(64, 162, 117, 1)
     ],
     ),),
-
-       child: Column( children: <Widget>[
-         Container(padding: const EdgeInsets.fromLTRB(5,40, 8, 0),
+    child: Padding(
+        padding: const EdgeInsets.fromLTRB(5, 40, 5, 10),
+       child: Column( children: [
+         Container( padding: EdgeInsets.only(
+         bottom: 2, // space between underline and text
+       ),
+      decoration: BoxDecoration(
+          border: Border(bottom: BorderSide(
+            color: Colors.white,  // Text colour here
+            width: 3.0, // Underline width
+          ))
+      ),
     child: Text(
     ' عن برنامج إحجز',
     textAlign: TextAlign.left,
-    style: TextStyle(decoration: TextDecoration.underline, decorationThickness: 2,fontStyle: FontStyle.italic,
-    fontSize: 22.0,
-    fontWeight: FontWeight.bold,
-    color: Colors.white,
-    fontFamily: "ElMessiri",
+    style: TextStyle(
+      wordSpacing: 3,
+      fontStyle: FontStyle.italic,
+      fontSize: 22.0,
+      fontWeight: FontWeight.bold,
+      color: Colors.white,
+      fontFamily: "ElMessiri",
                   ),
                 )),
 
 
 
-   Container( padding: const EdgeInsets.fromLTRB(5, 0, 8, 10),
+   Container( padding: const EdgeInsets.fromLTRB(15, 26, 8, 10),
 
      child: Text(" ابتكر تطبيق احجز في سبيل تسهيل الحصول على لقاح كورونا عبر الهواتف الذكية, وذلك من خلال حجز مواعيد في المراكز الصحية والمستشفيات المعتمدة لإعطاء اللقاح، ويتميز هذا التطبيق بسهولة وسرعة الاستخدام وحفظ خصوصية المستخدم، والأهم من ذلك، فإن التطبيق لا يتطلب من المستخدم إنشاء حساب لتسجيل الدخول،"
        ,textAlign: TextAlign.right,style: TextStyle(
-           fontSize: 19.0,
-           fontWeight: FontWeight.bold,
+           wordSpacing: 1,
+           fontSize: 17.0,
+
            color: Colors.white,
            fontFamily: "ElMessiri",)  ),),
-    ]) ),)
+    ])),
 
 
 
@@ -61,7 +73,36 @@ class infoscreen  extends StatelessWidget {
 
 
 
-    )));
+
+
+
+
+
+
+
+
+
+
+    ),
+    )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    )
+        )
+    );
 
 
   }}
