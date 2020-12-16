@@ -6,8 +6,10 @@ class infoscreen  extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(child: Container(
-          height:1500 ,
+      backgroundColor: Colors.teal[300],
+        body: SingleChildScrollView(child: SafeArea(
+          child: Container(
+            height:1500 ,
       width: MediaQuery.of(context).size.width,
     child: Center(
     child: new Container(
@@ -23,16 +25,17 @@ class infoscreen  extends StatelessWidget {
     ],
     ),),
     child: Padding(
-        padding: const EdgeInsets.fromLTRB(5, 40, 5, 10),
-       child: Column( children: [
-         Container( padding: EdgeInsets.only(
-         bottom: 2, // space between underline and text
+          padding: const EdgeInsets.fromLTRB(5, 40, 5, 10),
+       child: Column( crossAxisAlignment: CrossAxisAlignment.end,
+           children: [
+           Container( padding: EdgeInsets.only(
+           bottom: 2, // space between underline and text
        ),
       decoration: BoxDecoration(
-          border: Border(bottom: BorderSide(
-            color: Colors.white,  // Text colour here
-            width: 3.0, // Underline width
-          ))
+            border: Border(bottom: BorderSide(
+              color: Colors.white,  // Text colour here
+              width: 3.0, // Underline width
+            ))
       ),
     child: Text(
     ' عن برنامج إحجز',
@@ -44,8 +47,8 @@ class infoscreen  extends StatelessWidget {
       fontWeight: FontWeight.bold,
       color: Colors.white,
       fontFamily: "ElMessiri",
-                  ),
-                )),
+                    ),
+                  )),
 
 
 
@@ -53,11 +56,11 @@ class infoscreen  extends StatelessWidget {
 
      child: Text(" ابتكر تطبيق احجز في سبيل تسهيل الحصول على لقاح كورونا عبر الهواتف الذكية, وذلك من خلال حجز مواعيد في المراكز الصحية والمستشفيات المعتمدة لإعطاء اللقاح، ويتميز هذا التطبيق بسهولة وسرعة الاستخدام وحفظ خصوصية المستخدم، والأهم من ذلك، فإن التطبيق لا يتطلب من المستخدم إنشاء حساب لتسجيل الدخول،"
        ,textAlign: TextAlign.right,style: TextStyle(
-           wordSpacing: 1,
-           fontSize: 17.0,
+             wordSpacing: 1,
+             fontSize: 17.0,
 
-           color: Colors.white,
-           fontFamily: "ElMessiri",)  ),),
+             color: Colors.white,
+             fontFamily: "ElMessiri",)  ),),
     ])),
 
 
@@ -100,7 +103,8 @@ class infoscreen  extends StatelessWidget {
 
 
 
-    )
+    ),
+        )
         )
     );
 
