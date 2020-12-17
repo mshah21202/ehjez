@@ -54,7 +54,7 @@ class infoscreen  extends StatelessWidget {
                                 color: Colors.white,
                                 fontFamily: "ElMessiri")
                         ),
-                        onPressed: () {Navigator.pushNamed(context, '');},
+                        onPressed: () {Navigator.pushNamed(context, '/about');},
                         color: Color.fromRGBO(46,168,172, 1),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
@@ -84,7 +84,7 @@ class infoscreen  extends StatelessWidget {
                                 color: Color.fromRGBO(46,168,172, 1),
                                 fontFamily: "ElMessiri")
                         ),
-                        onPressed: () {Navigator.pushNamed(context, '/info');},
+                        onPressed: () {Navigator.pushNamed(context, '/help');},
                         color: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
