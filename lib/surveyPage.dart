@@ -270,7 +270,7 @@ class _surveyPageState extends State<surveyPage> {
                           child: ButtonTheme(shape: RoundedRectangleBorder(
                               borderRadius: BorderRadiusDirectional.circular(20)
                           ),
-                            child: RaisedButton(onPressed: () {Navigator.pushNamed(context, '/survey');}, color: Color.fromRGBO(46,168,172, 1),
+                            child: RaisedButton(onPressed: () {Navigator.pushNamed(context, '/survey2');}, color: Color.fromRGBO(46,168,172, 1),
                               child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                                 Text("التالي", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),),
                                 Padding(
