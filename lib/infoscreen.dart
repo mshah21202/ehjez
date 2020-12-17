@@ -24,111 +24,100 @@ class infoscreen  extends StatelessWidget {
     Color.fromRGBO(64, 162, 117, 1)
     ],
     ),),
-    child: Padding(
-          padding: const EdgeInsets.fromLTRB(5, 40, 10, 10),
-       child: Column( crossAxisAlignment: CrossAxisAlignment.center,
-           children: [
-           Container( padding: EdgeInsets.only(
-           bottom: 2,
-       ),
-      decoration: BoxDecoration(
-            border: Border(bottom: BorderSide(
-              color: Colors.white,
-              width: 3.0,
-            ))
-      ),
-    child: Text(
-    'عن برنامج إحج',
-    textAlign: TextAlign.center,
-    style: TextStyle(
-      wordSpacing: 0,
-      fontStyle: FontStyle.italic,
-      fontSize: 22.0,
-      fontWeight: FontWeight.bold,
-      color: Colors.white,
-      fontFamily: "ElMessiri",
+
+
+      child: Column(
+          children: [
+            Row(mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+                  child: Image.asset(
+                    "assets/Ehjez-Logo.png", width: 200, height: 200,)
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: ButtonTheme(
+                      height: 70,
+                      child: RaisedButton(
+                        child: Text("عن احجز",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontFamily: "ElMessiri")
+                        ),
+                        onPressed: () {Navigator.pushNamed(context, '');},
+                        color: Color.fromRGBO(46,168,172, 1),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+
+                      ),
+
                     ),
-                  )),
+                  ),
 
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(30, 50, 30, 0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: ButtonTheme(
+                      height: 70,
+                      child: RaisedButton(
+                        child: Text("المساعدة",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromRGBO(46,168,172, 1),
+                                fontFamily: "ElMessiri")
+                        ),
+                        onPressed: () {Navigator.pushNamed(context, '/info');},
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
 
+                      ),
 
-   Container( padding: const EdgeInsets.fromLTRB(15, 26, 8, 10),
-
-     child: Text(" ابتكر تطبيق احجز في سبيل تسهيل الحصول على لقاح كورونا عبر الهواتف الذكية, وذلك من خلال حجز مواعيد في المراكز الصحية والمستشفيات المعتمدة لإعطاء اللقاح، ويتميز هذا التطبيق بسهولة وسرعة الاستخدام وحفظ خصوصية المستخدم، والأهم من ذلك، فإن التطبيق لا يتطلب من المستخدم إنشاء حساب لتسجيل الدخول،"
-       ,textAlign: TextAlign.center,style: TextStyle(
-             wordSpacing: 1,
-             fontSize: 17.0,
-
-             color: Colors.white,
-             fontFamily: "ElMessiri",)  ),),
-
-
-             Container (
-               padding: EdgeInsets.only(
-               bottom: 2,
-             ),
-               decoration: BoxDecoration(
-                   border: Border(bottom: BorderSide(
-                     color: Colors.white,
-                     width: 3.0,
-                   ))
-               ),
-
-                 child: Text(  "التعليمات  ",
-                   style: TextStyle(
-                   wordSpacing: 0,
-                   fontStyle: FontStyle.italic,
-                   fontSize: 22.0,
-                   fontWeight: FontWeight.bold,
-                   color: Colors.white,
-                   fontFamily: "ElMessiri",
-                 ), ),
-             )])),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ]
+      ),
 
 
 
 
     ),
-    )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     ),
-        )
-        )
+          ),
+        ),
+        ),
     );
+
+
+
+
+
+
+
+
+
 
 
   }}

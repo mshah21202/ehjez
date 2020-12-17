@@ -14,7 +14,10 @@ void main() => runApp(MaterialApp(
     '/reserve': (context) => Reservationscreen(),
     '/info': (context) => infoscreen(),
     '/survey': (context) => surveyPage(),
-    '/survey2': (context) => surveyPageSec()
+    '/survey2': (context) => surveyPageSec(),
+
   },
 ));
+
+
 
