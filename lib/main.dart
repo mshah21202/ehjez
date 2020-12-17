@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:ehjez/splashScreen.dart';
 import 'package:ehjez/ReservationScreen.dart';
 import 'package:ehjez/infoscreen.dart';
+import 'package:ehjez/aboutapp.dart';
+import 'helpscreen.dart';
+import 'package:ehjez/privacyPolicy.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute: '/splash',
@@ -15,6 +18,9 @@ void main() => runApp(MaterialApp(
     '/info': (context) => infoscreen(),
     '/survey': (context) => surveyPage(),
     '/survey2': (context) => surveyPageSec(),
+    '/about' : (context) => aboutApp(),
+    '/help' : (context) => helpScreen(),
+    '/privacy' : (context) => privacyPolicy(),
 
   },
 ));

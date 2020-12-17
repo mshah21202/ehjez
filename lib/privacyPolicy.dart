@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class helpScreen extends StatelessWidget {
+class privacyPolicy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();
