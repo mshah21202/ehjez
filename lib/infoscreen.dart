@@ -1,4 +1,5 @@
 import 'package:ehjez/ReservationScreen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
@@ -69,12 +70,12 @@ class infoscreen  extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(30, 50, 30, 0),
+              padding: const EdgeInsets.fromLTRB(30, 30, 30, 0),
               child: Row(
                 children: [
                   Expanded(
                     child: ButtonTheme(
-                      height: 70,
+                      height: 50,
                       child: RaisedButton(
                         child: Text("المساعدة",
                             textAlign: TextAlign.center,
@@ -108,23 +109,73 @@ class infoscreen  extends StatelessWidget {
                borderRadius: BorderRadius.circular(13)),
 
              child: Column(mainAxisAlignment: MainAxisAlignment.start,
-                 children: [Text(
-                 "privacy policy",
-                     style: TextStyle(
-                           fontSize: 18,
-                              color: Colors.white)),
+                           crossAxisAlignment: CrossAxisAlignment.end,
 
-                   Text(
-                   "rate and review",
-                       style: TextStyle(
-                            fontSize: 18,
-                                color: Colors.white)),
+                 children:<Widget> [
 
-                   Text(
-                       "send feedback",
-                       style: TextStyle(
-                           fontSize: 18,
-                              color: Colors.white)),
+
+                   Container (padding: const EdgeInsets.fromLTRB(10, 5, 10, 2),
+                   child: ButtonTheme(
+                     height: 2,
+                     child: FlatButton(
+                       color: Colors.transparent,
+                       splashColor: Colors.black26,
+                       onPressed: () {
+                         Navigator.pushNamed(context, '/privacy');
+                       },
+                       child: Text(
+                           "تقييم التطبيق",
+                           textAlign: TextAlign.right,
+                           style: TextStyle(fontFamily: 'ElMessiri',
+                               fontWeight: FontWeight.bold,
+                               fontSize: 18,
+                               color: Colors.white)),
+                     ),
+
+                   ),
+                 ),
+                   Container (padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
+                     child: ButtonTheme(
+                       height: 2,
+                       child: FlatButton(
+                         color: Colors.transparent,
+                         splashColor: Colors.black26,
+                         onPressed: () {
+                           Navigator.pushNamed(context, '/privacy');
+                         },
+                         child: Text(
+                             "إرسال ملاحظات",
+                             textAlign: TextAlign.right,
+                             style: TextStyle(fontFamily: 'ElMessiri',
+                                 fontWeight: FontWeight.bold,
+                                 fontSize: 18,
+                                 color: Colors.white)),
+                       ),
+
+                     ),
+                   ),
+
+                   Container (padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
+                     child: ButtonTheme(
+                       height: 2,
+                       child: FlatButton(
+                         color: Colors.transparent,
+                         splashColor: Colors.black26,
+                         onPressed: () {
+                           Navigator.pushNamed(context, '/privacy');
+                         },
+                         child: Text(
+                             "سياسة الخصوصية",
+                             textAlign: TextAlign.right,
+                             style: TextStyle(
+                                 fontFamily: 'ElMessiri',
+                                 fontWeight: FontWeight.bold,
+                                 fontSize: 18,
+                                 color: Colors.white)),
+                       ),
+
+                     ),
+                   ),
 
 
                  ])
@@ -144,15 +195,9 @@ class infoscreen  extends StatelessWidget {
         ),
         ),
     );
-
-
-
-
-
-
-
-
-
-
-
   }}
+
+
+
+
+

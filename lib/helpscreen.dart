@@ -25,10 +25,10 @@ class helpScreen  extends StatelessWidget {
                   ],
                 ),),
 
-            child: Column(
 
 
-            )
+
+
             ),),),),),
     );
 
