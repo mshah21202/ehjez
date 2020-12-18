@@ -1,15 +1,20 @@
 import 'package:ehjez/ReservationScreen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+
 
 
 class infoscreen  extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.teal[300],
         body: SingleChildScrollView(child: SafeArea(
           child: Container(
-            height:1500 ,
+            height:750 ,
       width: MediaQuery.of(context).size.width,
     child: Center(
     child: new Container(
@@ -31,7 +36,7 @@ class infoscreen  extends StatelessWidget {
             Row(mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: Image.asset(
                     "assets/Ehjez-Logo.png", width: 200, height: 200,)
                 ),
@@ -54,7 +59,7 @@ class infoscreen  extends StatelessWidget {
                                 color: Colors.white,
                                 fontFamily: "ElMessiri")
                         ),
-                        onPressed: () {Navigator.pushNamed(context, '');},
+                        onPressed: () {Navigator.pushNamed(context, '/about');},
                         color: Color.fromRGBO(46,168,172, 1),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
@@ -69,12 +74,12 @@ class infoscreen  extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(30, 50, 30, 0),
+              padding: const EdgeInsets.fromLTRB(30, 30, 30, 0),
               child: Row(
                 children: [
                   Expanded(
                     child: ButtonTheme(
-                      height: 70,
+                      height: 50,
                       child: RaisedButton(
                         child: Text("المساعدة",
                             textAlign: TextAlign.center,
@@ -84,7 +89,7 @@ class infoscreen  extends StatelessWidget {
                                 color: Color.fromRGBO(46,168,172, 1),
                                 fontFamily: "ElMessiri")
                         ),
-                        onPressed: () {Navigator.pushNamed(context, '/info');},
+                        onPressed: () {Navigator.pushNamed(context, '/help');},
                         color: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
@@ -97,7 +102,92 @@ class infoscreen  extends StatelessWidget {
                 ],
               ),
             ),
-          ]
+
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0,50,0,0),
+          child: Container(
+
+           child: SizedBox(width: 325,height: 210, child:
+           Container(decoration: BoxDecoration(
+               color:Colors.teal[300].withOpacity(0.4),
+               borderRadius: BorderRadius.circular(13)),
+
+             child: Column(mainAxisAlignment: MainAxisAlignment.start,
+                           crossAxisAlignment: CrossAxisAlignment.end,
+
+                 children:<Widget> [
+
+
+                   Container (padding: const EdgeInsets.fromLTRB(10, 5, 10, 2),
+                   child: ButtonTheme(
+                     height: 2,
+                     child: FlatButton(
+                       color: Colors.transparent,
+                       splashColor: Colors.black26,
+                       onPressed: () {
+                        openurl();
+                       },
+                       child: Text(
+                           "تقييم التطبيق",
+                           textAlign: TextAlign.right,
+                           style: TextStyle(fontFamily: 'ElMessiri',
+                               fontWeight: FontWeight.bold,
+                               fontSize: 18,
+                               color: Colors.white)),
+                     ),
+
+                   ),
+                 ),
+                   Container (padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
+                     child: ButtonTheme(
+                       height: 2,
+                       child: FlatButton(
+                         color: Colors.transparent,
+                         splashColor: Colors.black26,
+                         onPressed: () {
+                           Navigator.pushNamed(context, '/privacy');
+                         },
+                         child: Text(
+                             "إرسال ملاحظات",
+                             textAlign: TextAlign.right,
+                             style: TextStyle(fontFamily: 'ElMessiri',
+                                 fontWeight: FontWeight.bold,
+                                 fontSize: 18,
+                                 color: Colors.white)),
+                       ),
+
+                     ),
+                   ),
+
+                   Container (padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
+                     child: ButtonTheme(
+                       height: 2,
+                       child: FlatButton(
+                         color: Colors.transparent,
+                         splashColor: Colors.black26,
+                         onPressed: () {
+                           Navigator.pushNamed(context, '/privacy');
+                         },
+                         child: Text(
+                             "سياسة الخصوصية",
+                             textAlign: TextAlign.right,
+                             style: TextStyle(
+                                 fontFamily: 'ElMessiri',
+                                 fontWeight: FontWeight.bold,
+                                 fontSize: 18,
+                                 color: Colors.white)),
+                       ),
+
+                     ),
+                   ),
+
+
+                 ])
+          )),
+
+
+
+          ))]
       ),
 
 
@@ -111,13 +201,13 @@ class infoscreen  extends StatelessWidget {
     );
 
 
-
-
-
-
-
-
-
-
+  }
+  openurl(){String googlestorelink="https:google.com";
+  launch(googlestorelink);
 
   }}
+
+
+
+
+
