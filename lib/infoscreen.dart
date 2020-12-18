@@ -9,7 +9,7 @@ class infoscreen  extends StatelessWidget {
       backgroundColor: Colors.teal[300],
         body: SingleChildScrollView(child: SafeArea(
           child: Container(
-            height:1500 ,
+            height:750 ,
       width: MediaQuery.of(context).size.width,
     child: Center(
     child: new Container(
@@ -31,7 +31,7 @@ class infoscreen  extends StatelessWidget {
             Row(mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: Image.asset(
                     "assets/Ehjez-Logo.png", width: 200, height: 200,)
                 ),
@@ -97,7 +97,42 @@ class infoscreen  extends StatelessWidget {
                 ],
               ),
             ),
-          ]
+
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0,50,0,0),
+          child: Container(
+
+           child: SizedBox(width: 325,height: 210, child:
+           Container(decoration: BoxDecoration(
+               color:Colors.teal[300].withOpacity(0.4),
+               borderRadius: BorderRadius.circular(13)),
+
+             child: Column(mainAxisAlignment: MainAxisAlignment.start,
+                 children: [Text(
+                 "privacy policy",
+                     style: TextStyle(
+                           fontSize: 18,
+                              color: Colors.white)),
+
+                   Text(
+                   "rate and review",
+                       style: TextStyle(
+                            fontSize: 18,
+                                color: Colors.white)),
+
+                   Text(
+                       "send feedback",
+                       style: TextStyle(
+                           fontSize: 18,
+                              color: Colors.white)),
+
+
+                 ])
+          )),
+
+
+
+          ))]
       ),
 
 
