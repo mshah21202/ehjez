@@ -1,9 +1,13 @@
 import 'package:ehjez/ReservationScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+
 
 
 class infoscreen  extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,7 +125,7 @@ class infoscreen  extends StatelessWidget {
                        color: Colors.transparent,
                        splashColor: Colors.black26,
                        onPressed: () {
-                         Navigator.pushNamed(context, '/privacy');
+                        openurl();
                        },
                        child: Text(
                            "تقييم التطبيق",
@@ -195,6 +199,12 @@ class infoscreen  extends StatelessWidget {
         ),
         ),
     );
+
+
+  }
+  openurl(){String googlestorelink="https:google.com";
+  launch(googlestorelink);
+
   }}
 
 
