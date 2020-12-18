@@ -7,10 +7,6 @@ class surveyPage extends StatefulWidget {
 }
 
 class _formKeys {
-  static final formKey1 = GlobalKey<FormState>();
-  static final formKey2 = GlobalKey<FormState>();
-  static final formKey3 = GlobalKey<FormState>();
-  static final formKey4 = GlobalKey<FormState>();
   static final formKey5 = GlobalKey<FormState>();
 }
 
