@@ -86,7 +86,7 @@ class mainscreen extends StatelessWidget {
                                     child: ButtonTheme(
                                         height: 70,
                                         child: RaisedButton(
-                                          child: Text("إحجز الأن",
+                                          child: Text("احجز الآن",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 20.0,

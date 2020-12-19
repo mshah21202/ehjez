@@ -85,7 +85,7 @@ class _surveyPageState extends State<surveyPage> {
                   ),
                   Theme(data: ThemeData.dark(),
                     child: Row( mainAxisAlignment: MainAxisAlignment.end,
-                      children: [Text("جنسية أخره", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 18)),
+                      children: [Text("جنسية أخرى", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 18)),
                         Padding(
                         padding: const EdgeInsets.fromLTRB(0, 0, 30, 0),
                         child: Radio(value: 3,
@@ -189,7 +189,7 @@ class _surveyPageState extends State<surveyPage> {
                                     padding: const EdgeInsets.fromLTRB(0, 2, 60, 0),
                                     child: Row(mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
-                                        (groupValue == 2)? Text("رقم الهوية", style: TextStyle(color: Colors.white.withOpacity(0.5), fontWeight: FontWeight.w100),) : Text("رقم الإقامة", style: TextStyle(color: Colors.white.withOpacity(0.5), fontWeight: FontWeight.w100),)
+                                        (groupValue == 2)? Text("الرقم الوطني", style: TextStyle(color: Colors.white.withOpacity(0.5), fontWeight: FontWeight.w100),) : Text("رقم الجواز", style: TextStyle(color: Colors.white.withOpacity(0.5), fontWeight: FontWeight.w100),)
                                       ],
                                     ),
                                   ),
