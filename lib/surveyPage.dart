@@ -79,7 +79,7 @@ class _surveyPageState extends State<surveyPage> {
                   ),
                   Theme(data: ThemeData.dark(),
                     child: Row( mainAxisAlignment: MainAxisAlignment.end,
-                      children: [Text("جنسية أخره", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 18)),
+                      children: [Text("جنسية أخرى", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 18)),
                         Padding(
                         padding: const EdgeInsets.fromLTRB(0, 0, 30, 0),
                         child: Radio(value: 3,
