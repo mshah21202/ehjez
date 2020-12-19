@@ -17,12 +17,6 @@ class _surveyPageState extends State<surveyPage> {
     print(e);
     setState(() {
       groupValue = e;
-      if (groupValue == 3) {
-        var label = "test";
-        // Change National ID to Passport No./Residency No.
-      } else if(groupValue == 2){
-        // Change Passport No./Residency No. to National ID
-      }
     });
 
   }
@@ -106,7 +100,9 @@ class _surveyPageState extends State<surveyPage> {
                             child: Stack(
                               children: [Padding(
                                 padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                                child: TextFormField(validator: (value){
+                                child: TextFormField(
+                                  cursorColor: Colors.white,
+                                  validator: (value){
                                   if (value.isEmpty){
                                     return "الرجاء إدخال الأسم";
                                   }
@@ -116,6 +112,7 @@ class _surveyPageState extends State<surveyPage> {
                                   showCursor: true,
                                   style: TextStyle(height: 3, color: Colors.white),
                                   decoration: new InputDecoration(
+                                    errorStyle: TextStyle(color: Colors.white),
                                       border: new OutlineInputBorder(borderSide: BorderSide(width: 0, style: BorderStyle.none),
                                         borderRadius: BorderRadius.circular(10.0)
                                       ),
@@ -154,9 +151,11 @@ class _surveyPageState extends State<surveyPage> {
                             child: Stack(
                                 children: [Padding(
                                   padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                                  child: TextFormField(validator: (value){
+                                  child: TextFormField(
+                                    cursorColor: Colors.white,
+                                    validator: (value){
                                     if (value.isEmpty){
-                                      return "الرجاء إدخال الأسم";
+                                      return "الرجاء إدخال";
                                     }
                                     return null;
                                   },
@@ -164,6 +163,7 @@ class _surveyPageState extends State<surveyPage> {
                                     showCursor: true,
                                     style: TextStyle(height: 3, color: Colors.white),
                                     decoration: new InputDecoration(
+                                      errorStyle: TextStyle(color: Colors.white),
                                       border: new OutlineInputBorder(borderSide: BorderSide(width: 0, style: BorderStyle.none),
                                           borderRadius: BorderRadius.circular(10.0)
                                       ),
@@ -202,9 +202,11 @@ class _surveyPageState extends State<surveyPage> {
                             child: Stack(
                                 children: [Padding(
                                   padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                                  child: TextFormField(validator: (value){
+                                  child: TextFormField(
+                                    cursorColor: Colors.white,
+                                    validator: (value){
                                     if (value.isEmpty){
-                                      return "الرجاء إدخال الأسم";
+                                      return "الرجاء إدخال العمر";
                                     }
                                     return null;
                                   },
@@ -212,6 +214,7 @@ class _surveyPageState extends State<surveyPage> {
                                     showCursor: true,
                                     style: TextStyle(height: 3, color: Colors.white),
                                     decoration: new InputDecoration(
+                                      errorStyle: TextStyle(color: Colors.white),
                                       border: new OutlineInputBorder(borderSide: BorderSide(width: 0, style: BorderStyle.none),
                                           borderRadius: BorderRadius.circular(10.0)
                                       ),
@@ -249,16 +252,18 @@ class _surveyPageState extends State<surveyPage> {
                             child: Stack(
                                 children: [Padding(
                                   padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                                  child: TextFormField(validator: (value){
+                                  child: TextFormField(
+                                    cursorColor: Colors.white,
+                                    validator: (value){
                                     if (value.isEmpty){
-                                      return "الرجاء إدخال الأسم";
+                                      return "الرجاء إدخال رقم الهاتف";
                                     }
                                     return null;
                                   },
                                     textAlign: TextAlign.end,
                                     showCursor: true,
                                     style: TextStyle(height: 3, color: Colors.white),
-                                    decoration: new InputDecoration(
+                                    decoration: new InputDecoration(errorStyle: TextStyle(color: Colors.white),
                                       border: new OutlineInputBorder(borderSide: BorderSide(width: 0, style: BorderStyle.none),
                                           borderRadius: BorderRadius.circular(10.0)
                                       ),
@@ -284,7 +289,7 @@ class _surveyPageState extends State<surveyPage> {
                                     padding: const EdgeInsets.fromLTRB(0, 2, 60, 0),
                                     child: Row(mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
-                                        Text("الإسم", style: TextStyle(color: Colors.white.withOpacity(0.5), fontWeight: FontWeight.w100),),
+                                        Text("رقم الهاتف", style: TextStyle(color: Colors.white.withOpacity(0.5), fontWeight: FontWeight.w100),),
                                       ],
                                     ),
                                   ),
