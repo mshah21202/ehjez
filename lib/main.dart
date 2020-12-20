@@ -8,6 +8,7 @@ import 'package:ehjez/infoscreen.dart';
 import 'package:ehjez/aboutapp.dart';
 import 'helpscreen.dart';
 import 'package:ehjez/privacyPolicy.dart';
+import 'package:ehjez/feedback.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute: '/splash',
@@ -21,7 +22,7 @@ void main() => runApp(MaterialApp(
     '/about' : (context) => aboutApp(),
     '/help' : (context) => helpScreen(),
     '/privacy' : (context) => privacyPolicy(),
-
+    '/feedback' : (context) => feedback(),
   },
 ));
 

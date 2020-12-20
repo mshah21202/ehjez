@@ -172,7 +172,7 @@ class infoscreen  extends StatelessWidget {
                                           splashColor: Colors.black26,
                                           onPressed: () {
                                             Navigator.pushNamed(
-                                                context, '/privacy');
+                                                context, '/feedback');
                                           },
                                           child: Text(
                                               "إرسال ملاحظات",

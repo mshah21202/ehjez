@@ -24,8 +24,13 @@ class helpScreen  extends StatelessWidget {
                     Color.fromRGBO(64, 162, 117, 1)
                   ],
                 ),),
+                child: Column(children: [
 
 
+
+
+
+            ])
 
 
 
