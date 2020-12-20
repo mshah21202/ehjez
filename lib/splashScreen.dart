@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:ehjez/mainpage.dart';
 import 'package:flutter/material.dart';
+import 'package:ehjez/loginPage.dart';
 
 class splashPage extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class splashPage extends StatefulWidget {
          void completed(){
              Navigator.of(context).pushReplacement(
                  MaterialPageRoute(
-                     builder: (context)=>mainscreen()
+                     builder: (context)=>loginPage()
                  )
              );
          }
