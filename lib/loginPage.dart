@@ -65,7 +65,7 @@ class _loginPageState extends State<loginPage> {
                         validator: (value){
                           if (value.isEmpty){
                             return "الرجاء إدخال الأسم";
-                          } else if (value == "20200461") {
+                          } else if (value == "1") {
                             return null;
                           } else if (value == "100000") {
                             return null;
@@ -111,7 +111,7 @@ class _loginPageState extends State<loginPage> {
                       validator: (value){
                         if (value.isEmpty){
                           return "الرجاء إدخال الأسم";
-                        } else if (value == "20200461") {
+                        } else if (value == "1") {
                           return null;
                         } else if (value == "100000") {
                           return null;
@@ -155,7 +155,7 @@ class _loginPageState extends State<loginPage> {
                           if (_formKey.currentState.validate()){
                             if (usernameController.text == "100000" && passwordController.text == "100000") {
                               Navigator.pushReplacementNamed(context, '/admin1');
-                            } else if (usernameController.text == "20200461" && passwordController.text == "20200461") {
+                            } else if (usernameController.text == "1" && passwordController.text == "1") {
                               Navigator.pushReplacementNamed(context, '/main');
                             };
                           };
