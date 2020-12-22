@@ -9,12 +9,13 @@ import 'package:ehjez/aboutapp.dart';
 import 'helpscreen.dart';
 import 'package:ehjez/privacyPolicy.dart';
 import 'package:ehjez/feedback.dart';
+import 'package:ehjez/loginPage.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute: '/splash',
   routes: {
     '/splash': (context) => splashPage(),
-    '/': (context) => mainscreen(),
+    '/main': (context) => mainscreen(),
     '/reserve': (context) => Reservationscreen(),
     '/info': (context) => infoscreen(),
     '/survey': (context) => surveyPage(),
@@ -23,6 +24,7 @@ void main() => runApp(MaterialApp(
     '/help' : (context) => helpScreen(),
     '/privacy' : (context) => privacyPolicy(),
     '/feedback' : (context) => feedback(),
+    '/' : (context) => loginPage(),
   },
 ));
 

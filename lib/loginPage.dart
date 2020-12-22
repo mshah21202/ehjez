@@ -8,6 +8,8 @@ class loginPage extends StatefulWidget {
 }
 
 class _loginPageState extends State<loginPage> {
+  TextEditingController usernameController = new TextEditingController();
+  TextEditingController passwordController = new TextEditingController();
   void completed(){
     Navigator.of(context).pushReplacement(
         MaterialPageRoute(
@@ -58,13 +60,16 @@ class _loginPageState extends State<loginPage> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
                       child: TextFormField(
+                        controller: usernameController,
                         cursorColor: Colors.white,
                         validator: (value){
                           if (value.isEmpty){
                             return "الرجاء إدخال الأسم";
                           } else if (value == "20200461") {
                             return null;
-                          } else {
+                          } else if (value == "100000") {
+                            return null;
+                          }else {
                             return "Wrong Password";
                           }
                           return null;
@@ -98,6 +103,7 @@ class _loginPageState extends State<loginPage> {
                         ,),
                     ),
                     TextFormField(
+                      controller: passwordController,
                       obscureText: true,
                       enableSuggestions: false,
                       autocorrect: false,
@@ -107,7 +113,9 @@ class _loginPageState extends State<loginPage> {
                           return "الرجاء إدخال الأسم";
                         } else if (value == "20200461") {
                           return null;
-                        } else {
+                        } else if (value == "100000") {
+                          return null;
+                        }else {
                           return "Wrong Password";
                         }
                         return null;
@@ -145,7 +153,11 @@ class _loginPageState extends State<loginPage> {
                       ),
                         child: RaisedButton(onPressed: () {
                           if (_formKey.currentState.validate()){
-                            Navigator.pushReplacementNamed(context, '/');
+                            if (usernameController.text == "10000" && passwordController.text == "100000") {
+
+                            } else if (usernameController.text == "20200461" && passwordController.text == "20200461") {
+                              Navigator.pushReplacementNamed(context, '/main');
+                            };
                           };
                           },color: Color.fromRGBO(46,168,172, 1),
                           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [

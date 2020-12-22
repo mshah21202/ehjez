@@ -10,11 +10,7 @@ class splashPage extends StatefulWidget {
 
      class _splashPageState extends State<splashPage> {
          void completed(){
-             Navigator.of(context).pushReplacement(
-                 MaterialPageRoute(
-                     builder: (context)=>loginPage()
-                 )
-             );
+             Navigator.pushReplacementNamed(context, '/');
          }
 
 
