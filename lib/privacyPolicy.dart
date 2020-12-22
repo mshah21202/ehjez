@@ -25,7 +25,7 @@ class privacyPolicy extends StatelessWidget {
         child: Column( crossAxisAlignment: CrossAxisAlignment.end,
           children: [
 
-            Container( padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
+            Container( padding: const EdgeInsets.fromLTRB(0, 50, 60, 20),
 
             child: Text(" سياسة الخصوصية "
                 ,textAlign: TextAlign.center,style: TextStyle(
@@ -37,7 +37,7 @@ class privacyPolicy extends StatelessWidget {
 
 
 
-            Container( padding: const EdgeInsets.fromLTRB(0, 10, 10, 10),
+            Container( padding: const EdgeInsets.fromLTRB(0, 0, 5, 10),
 
               child: Text("أ – مقدمة"
                   ,textAlign: TextAlign.right,style: TextStyle(
@@ -49,20 +49,35 @@ class privacyPolicy extends StatelessWidget {
 
 
 
+            Container( padding: const EdgeInsets.fromLTRB(2, 0, 5, 5),
 
-          Container( padding: const EdgeInsets.fromLTRB(2, 35, 10, 10),
-
-      child: Text(" إننا نهتم بشكل كبير بخصوصية بيانات المستخدم، ونتعهد بحمايتها. تشرح هذه السياسة كيفية التصرف في معلوماتك الشخصية "
-          ,textAlign: TextAlign.right,style: TextStyle(
-            wordSpacing: 1,
-            fontSize: 16.0,
-            color: Colors.white,
-            fontFamily: "ElMessiri",)  ),),
-
+              child: Text(" إننا نهتم بشكل كبير بخصوصية بيانات المستخدم، ونتعهد بحمايتها. تشرح هذه السياسة كيفية التصرف في معلوماتك الشخصية "
+                  ,textAlign: TextAlign.right,style: TextStyle(
+                    wordSpacing: 1,
+                    fontSize: 15.0,
+                    color: Colors.white,
+                    fontFamily: "ElMessiri",)  ),),
 
 
 
-            Container( padding: const EdgeInsets.fromLTRB(0, 10, 10, 10),
+
+
+
+            Container( padding: const EdgeInsets.fromLTRB(2, 0, 10, 0),
+
+              child: Text(" * بموافقتك على استخدامنا لملفات تعريف الارتباط وفقًا لبنود هذه السياسة عند زيارتك لتطبيقنا الإلكتروني لأول مرة فإنك تسمح لنا باستخدام ملفات تعريف الارتباط في كل مرة تستخدم التطبيق."
+                  ,textAlign: TextAlign.right,style: TextStyle(
+                    wordSpacing: 1,
+                    fontSize: 15.0,
+                    color: Colors.white,
+                    fontFamily: "ElMessiri",)  ),),
+
+
+
+
+
+
+            Container( padding: const EdgeInsets.fromLTRB(0, 30, 10, 0),
 
               child: Text("ب. جمع المعلومات الشخصية "
                   ,textAlign: TextAlign.right,style: TextStyle(
