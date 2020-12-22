@@ -10,6 +10,7 @@ import 'helpscreen.dart';
 import 'package:ehjez/privacyPolicy.dart';
 import 'package:ehjez/feedback.dart';
 import 'package:ehjez/loginPage.dart';
+import 'adminMainPage.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute: '/splash',
@@ -25,6 +26,7 @@ void main() => runApp(MaterialApp(
     '/privacy' : (context) => privacyPolicy(),
     '/feedback' : (context) => feedback(),
     '/' : (context) => loginPage(),
+    '/admin1' : (context) => adminMainPage(),
   },
 ));
 

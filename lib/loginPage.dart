@@ -153,8 +153,8 @@ class _loginPageState extends State<loginPage> {
                       ),
                         child: RaisedButton(onPressed: () {
                           if (_formKey.currentState.validate()){
-                            if (usernameController.text == "10000" && passwordController.text == "100000") {
-
+                            if (usernameController.text == "100000" && passwordController.text == "100000") {
+                              Navigator.pushReplacementNamed(context, '/admin1');
                             } else if (usernameController.text == "20200461" && passwordController.text == "20200461") {
                               Navigator.pushReplacementNamed(context, '/main');
                             };
