@@ -25,7 +25,7 @@ class privacyPolicy extends StatelessWidget {
         child: Column( crossAxisAlignment: CrossAxisAlignment.end,
           children: [
 
-            Container( padding: const EdgeInsets.fromLTRB(0, 50, 60, 20),
+            Container( padding: const EdgeInsets.fromLTRB(0, 50, 70, 20),
 
             child: Text(" سياسة الخصوصية "
                 ,textAlign: TextAlign.center,style: TextStyle(
@@ -44,6 +44,7 @@ class privacyPolicy extends StatelessWidget {
                     wordSpacing: 1,
                     fontSize: 17.0,
                     color: Colors.white,
+                    fontWeight: FontWeight.bold,
                     fontFamily: "ElMessiri",)  ),),
 
 
@@ -77,25 +78,26 @@ class privacyPolicy extends StatelessWidget {
 
 
 
-            Container( padding: const EdgeInsets.fromLTRB(0, 30, 10, 0),
+            Container( padding: const EdgeInsets.fromLTRB(2, 30, 10, 10),
 
               child: Text("ب. جمع المعلومات الشخصية "
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
                     fontSize: 17.0,
                     color: Colors.white,
+                    fontWeight: FontWeight.bold,
                     fontFamily: "ElMessiri",)  ),),
 
 
 
 
 
-            Container( padding: const EdgeInsets.fromLTRB(2, 10, 10, 10),
+            Container( padding: const EdgeInsets.fromLTRB(2, 0, 10, 0),
 
-              child: Text(" قد يتم تخزين وجمع نوعين من المعلومات عنك  واستخدام بعض المعلومات الشخصية من خلال الموقع، مثل: "
+              child: Text(" قد يتم تخزين وجمع نوعين من المعلومات عنك  واستخدام بعض المعلومات الشخصية من خلال الموقع، مثل:"
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -103,24 +105,24 @@ class privacyPolicy extends StatelessWidget {
 
 
 
-      Container( padding: const EdgeInsets.fromLTRB(2, 10, 10, 10),
+      Container( padding: const EdgeInsets.fromLTRB(3, 10, 10, 0),
 
-        child: Text(" 1)المعلومات الشخصية المقدمة لنا من قبلك في وقت التسجيل الطوعي (أو بعده) للخدمات المقدمة من قبلنا مثل (ولكن ليس على سبيل الحصر)، اسمك، صور ملفك الشخصي، الجنس، تاريخ الميلاد، الحالة الاجتماعية، الحالة الصحية. (“معلومات شخصية”)؛ "
+        child: Text(" ١) المعلومات الشخصية المقدمة لنا من قبلك في وقت التسجيل الطوعي (أو بعده) للخدمات المقدمة من قبلنا مثل (ولكن ليس على سبيل الحصر)، اسمك، صور ملفك الشخصي، الجنس، تاريخ الميلاد، الحالة الاجتماعية، الحالة الصحية. (“معلومات شخصية”)؛ "
             ,textAlign: TextAlign.right,style: TextStyle(
               wordSpacing: 1,
-              fontSize: 17.0,
+              fontSize: 15.0,
               color: Colors.white,
               fontFamily: "ElMessiri",)  ),),
 
 
 
 
-            Container( padding: const EdgeInsets.fromLTRB(2, 10, 10, 10),
+            Container( padding: const EdgeInsets.fromLTRB(3, 10, 10, 10),
 
-              child: Text(" 2) المعلومات المجمعة من خلال أنظمتنا، مثل نوع المتصفح، والإصدار، ونظام التشغيل، واسم نطاق ووقت الدخول إلى التطبيق. وتستخدم هذه المعلومات لأغراض البحث الخاصة بنا وهي منفصلة عن أية معلومات شخصية. "
+              child: Text(" ٢) المعلومات المجمعة من خلال أنظمتنا، مثل نوع المتصفح، والإصدار، ونظام التشغيل، واسم نطاق ووقت الدخول إلى التطبيق. وتستخدم هذه المعلومات لأغراض البحث الخاصة بنا وهي منفصلة عن أية معلومات شخصية. "
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -128,24 +130,24 @@ class privacyPolicy extends StatelessWidget {
 
 
 
-            Container( padding: const EdgeInsets.fromLTRB(2, 10, 10, 10),
+            Container( padding: const EdgeInsets.fromLTRB(3, 0, 10, 10),
 
-              child: Text(" 2.1) وننوه إلى أن فشلك في تقديم المعلومات الشخصية الضرورية عند الطلب قد يؤدي إلى عدم توفير بعض الخدمات لك."
+              child: Text(" ٢.١) وننوه إلى أن فشلك في تقديم المعلومات الشخصية الضرورية عند الطلب قد يؤدي إلى عدم توفير بعض الخدمات لك."
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
 
 
 
-            Container( padding: const EdgeInsets.fromLTRB(2, 10, 10, 10),
+            Container( padding: const EdgeInsets.fromLTRB(3, 10, 10, 10),
 
-              child: Text(" * معلومات حول زياراتك لهذا الموقع واستخدامه بما في ذلك مصدر الإحالة، ومدة الزيارة، وما تشاهده على الصفحة، ومسارات التصفح في الموقع. "
+              child: Text(" * معلومات حول زياراتك لهذا الموقع واستخدامه بما في ذلك مصدر الإحالة، ومدة الزيارة، وما تشاهده على الصفحة، ومسارات التصفح في الموقع."
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -153,24 +155,24 @@ class privacyPolicy extends StatelessWidget {
 
 
 
-            Container( padding: const EdgeInsets.fromLTRB(2, 10, 10, 10),
+            Container( padding: const EdgeInsets.fromLTRB(3, 10, 10, 10),
 
               child: Text(" * ) لن نشارك معلوماتك الشخصية مع أي طرف ثالث (غير الجهات التابعة لتطبيق احجز) إلا إذا كنت قد قدمت موافقتك الصريحة على ذلك. نحن ملتزمون بالحفاظ على معايير أمنية وإجراءات صارمة بهدف منع الدخول غير المصرح به إلى البيانات الخاصة بك من قبل طرف ثالث. قمنا بتنفيذ إجراءات إدارية لحماية وتأمين المعلومات الشخصية التي نجمعها. "
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
 
 
 
-            Container( padding: const EdgeInsets.fromLTRB(2, 10, 10, 10),
+            Container( padding: const EdgeInsets.fromLTRB(3, 10, 10, 10),
 
               child: Text("قبل أن تفصح لنا عن المعلومات الشخصية الخاصة بشخص آخر، ينبغي عليك الحصول على موافقة هذا الشخص على كل من الكشف عن هذه المعلومات الشخصية ومعالجتها وفقًا لهذه السياسة. على الرغم من أننا نتخذ جميع التدابير المعقولة لمنع الدخول غير القانوني إلى المعلومات الشخصية، فإننا لا نستطيع التأكيد بأن أي طرف ثالث سيقوم بالدخول غير قانوني إلى المعلومات الشخصية التي تقدمها لنا ونحن نقترح عليك أن تأخذ جميع الاحتياطات اللازمة. لا توجد طريقة للانتقال عبر الإنترنت، أو طريقة تخزين إلكترونية، بما في ذلك البريد الإلكتروني، وغير آمنة 100٪. لا يمكننا تحمل مسؤولية أو تبعة الدخول غير القانوني أو غير المصرح به من قبل أي طرف ثالث على المعلومات الشخصية الخاصة بك. "
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -179,12 +181,12 @@ class privacyPolicy extends StatelessWidget {
 
 
 
-            Container( padding: const EdgeInsets.fromLTRB(2, 10, 10, 10),
+            Container( padding: const EdgeInsets.fromLTRB(3, 10, 10, 10),
 
               child: Text("ج. استخدام معلوماتك الشخصية\n تستخدم المعلومات الشخصية المقدمة إلينا عبر تطبيقنا الإلكتروني في الأغراض الموضحة في هذه السياسة أو على الصفحات ذات الصلة من الموقع. قد نستخدم معلوماتك الشخصية في الأغراض التالية: "
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -198,7 +200,7 @@ class privacyPolicy extends StatelessWidget {
               child: Text("*  إدارة موقعنا وأعمالنا على شبكة الإنترنت. "
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -210,7 +212,7 @@ class privacyPolicy extends StatelessWidget {
               child: Text("*  * تخصيص موقعنا على شبكة الإنترنت ليكون أكثر ملاءمة بالنسبة لك. "
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -221,7 +223,7 @@ class privacyPolicy extends StatelessWidget {
               child: Text("* تمكينك من استخدام الخدمات المتاحة على موقعنا "
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -234,7 +236,7 @@ class privacyPolicy extends StatelessWidget {
               child: Text("* تزويد الأطراف الثالثة بمعلومات إحصائية عن مستخدمينا (غير أن هذه الأطراف الثالثة لن تتمكن من تحديد المستخدمين لتلك المعلومات بحد ذاتهم)."
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -246,7 +248,7 @@ class privacyPolicy extends StatelessWidget {
               child: Text("* التعامل مع الاستفسارات والشكاوى التي تقدمها أنت أو تقدم لنا بشأنك على موقعنا."
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -258,7 +260,7 @@ class privacyPolicy extends StatelessWidget {
               child: Text("*  حماية موقعنا من الاحتيال والحفاظ على أمنه."
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -269,7 +271,7 @@ class privacyPolicy extends StatelessWidget {
               child: Text("* التحقق من الامتثال للشروط والأحكام التي تحكم استخدام تطبيقنا الإلكتروني "
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -281,7 +283,7 @@ class privacyPolicy extends StatelessWidget {
               child: Text("* استخدامات أخرى."
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
