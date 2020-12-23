@@ -9,7 +9,7 @@ class aboutApp extends StatelessWidget {
         backgroundColor: Colors.teal[300],
         body: SingleChildScrollView(child: SafeArea(
           child: Container(
-              height:1500 ,
+              height:920 ,
               width: MediaQuery.of(context).size.width,
               child: Center(
                 child: new Container(
@@ -38,7 +38,7 @@ class aboutApp extends StatelessWidget {
                                     ))
                                 ),
                                 child: Text(
-                                  'عن برنامج إحج',
+                                  'عن برنامج إحجز',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     wordSpacing: 0,
@@ -54,7 +54,7 @@ class aboutApp extends StatelessWidget {
 
                             Container( padding: const EdgeInsets.fromLTRB(15, 26, 8, 10),
 
-                              child: Text(" ابتكر تطبيق احجز في سبيل تسهيل الحصول على لقاح كورونا عبر الهواتف الذكية, وذلك من خلال حجز مواعيد في المراكز الصحية والمستشفيات المعتمدة لإعطاء اللقاح، ويتميز هذا التطبيق بسهولة وسرعة الاستخدام وحفظ خصوصية المستخدم، والأهم من ذلك، فإن التطبيق لا يتطلب من المستخدم إنشاء حساب لتسجيل الدخول،"
+                              child: Text(" ابتكر تطبيق احجز في سبيل تسهيل الحصول على لقاح كورونا عبر الهواتف الذكية, من خلال إمكانية حجز مواعيد لك ولعائلتك في المراكز الصحية والمستشفيات المعتمدة من وزارة الصحة لإعطاء اللقاح، وذلك في إطار دعم الجهود الحكومية لاحتواء جائحة كورونا، ويتميز هذا التطبيق بسهولة وسرعة الاستخدام وحفظ خصوصية المستخدم، بالإضافة لتوفير الوقت والجهد، كما يمكن أن يساهم أيضاً في تقليل نسبة الإصابة بالعدوى من المستشفيات، علاوةً على ذلك سيكون التسجيل فيه متاحًا للأفراد من مواطنين ووافدين، كما سيعمل على توفير أحدث التنبيهات والأخبار الطبيّة الصادرة من وزارة الصحة عن الفيروس وانتشاره وسبل الوقاية منه، وتجدر الإشارة إلى أن العمل على تطوير وتحديث هذا التطبيق يجري بشكل مستمر وذلك بإضافة المزيد من الخصائص والمزايا في التحديثات القادمة."
                                   ,textAlign: TextAlign.center,style: TextStyle(
                                     wordSpacing: 1,
                                     fontSize: 17.0,
@@ -65,7 +65,7 @@ class aboutApp extends StatelessWidget {
 
                             Container (
                               padding: EdgeInsets.only(
-                                bottom: 2,
+                                top: 2,
                               ),
                               decoration: BoxDecoration(
                                   border: Border(bottom: BorderSide(
@@ -76,6 +76,7 @@ class aboutApp extends StatelessWidget {
                               ),
 
                               child: Text(  "التعليمات  ",
+                                textAlign: TextAlign.right,
                                 style: TextStyle(
                                   wordSpacing: 0,
                                   fontStyle: FontStyle.italic,
@@ -90,8 +91,8 @@ class aboutApp extends StatelessWidget {
 
                             Container( padding: const EdgeInsets.fromLTRB(15, 26, 8, 10),
 
-                              child: Text("  ابتكر تطبيق احجز في سبيل تسهيل الحصول على لقاح كورونا عبر الهواتف الذكية, وذلك من خلال حجز مواعيد في المراكز الصحية والمستشفيات المعتمدة من وزارة الصحة لإعطاء اللقاح، ويتميز هذا التطبيق بسهولة وسرعة الاستخدام وحفظ خصوصية المستخدم، علاوةً على ذلك سيكون التسجيل فيه متاحًا للأفراد من مواطنين ووافدين، وتجدر الإشارة إلى أن العمل على تطوير وتحديث هذا التطبيق يجري بشكل مستمر وذلك بإضافة المزيد من الخصائص والمزايا في التحديثات القادمة."
-                                  ,textAlign: TextAlign.center,style: TextStyle(
+                              child: Text("ينبغي الحرص على تعبئة البيانات الخاصة بالمستخدم بشكل كامل و صحيح، حيث تعتبر هذه المعلومات مهمة للغاية للكوادر الصحية، فقد تمكنهم من معرفة بعض المعلومات الأولية و المهمة جداً، وسيتطلب التطبيق إجراء تسجيل دخول، قبل البدء في عملية حجز موعد لأخذ اللقاح."
+                                  ,textAlign: TextAlign.right,style: TextStyle(
                                     wordSpacing: 1,
                                     fontSize: 17.0,
                                     color: Colors.white,
