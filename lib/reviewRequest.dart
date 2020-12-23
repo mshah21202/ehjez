@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+
+
+class reviewRequest extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.teal[300],
+      body: Stack(
+          children: [
+            SafeArea(
+              child: new Container(
+                width: double.infinity,
+                height: double.infinity,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                    colors: [
+                      Color.fromRGBO(31, 112, 138, 1),
+                      Color.fromRGBO(64, 162, 117, 1)
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ]
+      ),
+    );
+  }
+}

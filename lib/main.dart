@@ -11,6 +11,7 @@ import 'package:ehjez/privacyPolicy.dart';
 import 'package:ehjez/feedback.dart';
 import 'package:ehjez/loginPage.dart';
 import 'adminMainPage.dart';
+import 'package:ehjez/reviewRequest.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute: '/splash',
@@ -20,13 +21,14 @@ void main() => runApp(MaterialApp(
     '/reserve': (context) => Reservationscreen(),
     '/info': (context) => infoscreen(),
     '/survey': (context) => surveyPage(),
-    '/survey2': (context) => surveyPageSec(),
+    // '/survey2': (context) => surveyPageSec(),
     '/about' : (context) => aboutApp(),
     '/help' : (context) => helpScreen(),
     '/privacy' : (context) => privacyPolicy(),
     '/feedback' : (context) => feedback(),
     '/' : (context) => loginPage(),
     '/admin1' : (context) => adminMainPage(),
+    '/review' : (context) => reviewRequest(),
   },
 ));
 

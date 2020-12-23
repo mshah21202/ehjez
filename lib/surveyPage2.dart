@@ -1,7 +1,10 @@
+import 'package:ehjez/databaseHelper.dart';
 import 'package:flutter/material.dart';
 import "dart:ui";
 
 class surveyPageSec extends StatefulWidget {
+  final int requestID;
+  surveyPageSec(this.requestID,{Key key}) : super(key: key);
   @override
   _surveyPageSecState createState() => _surveyPageSecState();
 }
@@ -9,7 +12,6 @@ class surveyPageSec extends StatefulWidget {
 
 
 class _surveyPageSecState extends State<surveyPageSec> {
-
 List<Map> questionList = [];
 Map<String,String> answer={};
 List<String> answers=['لا','نعم'];
@@ -36,7 +38,7 @@ List<String> answers=['لا','نعم'];
   }
 
   Widget build(BuildContext context) {
-
+    int requestID = widget.requestID;
     return Scaffold(
         resizeToAvoidBottomPadding: false,
         resizeToAvoidBottomInset: true,
@@ -135,7 +137,39 @@ List<String> answers=['لا','نعم'];
                           child: ButtonTheme(shape: RoundedRectangleBorder(
                               borderRadius: BorderRadiusDirectional.circular(20)
                           ),
-                            child: RaisedButton(onPressed: () {}, color: Color.fromRGBO(46,168,172, 1),
+                            child: RaisedButton(onPressed: () async {
+                              String question1 = answer['ID1'].toString();
+                              String question2 = answer['ID2'].toString();
+                              String question3 = answer['ID3'].toString();
+
+                              int answer1, answer2, answer3;
+
+                              if (question1 == "نعم") {
+                                answer1 = 1;
+                              } else {
+                                answer1 = 2;
+                              }
+                              if (question2 == "نعم") {
+                                answer2 = 1;
+                              } else {
+                                answer2 = 2;
+                              }
+                              if (question3 == "نعم") {
+                                answer3 = 1;
+                              } else {
+                                answer3 = 2;
+                              }
+
+                              await databaseHelper.instance.update({
+                                databaseHelper.columnID: requestID,
+                                databaseHelper.columnQ1: answer1,
+                                databaseHelper.columnQ2: answer2,
+                                databaseHelper.columnQ3: answer3,
+                              });
+                              Navigator.pushReplacementNamed(context, '/review');
+                              List<Map<String,dynamic>> queryRows = await databaseHelper.instance.queryAll();
+                              print(queryRows);
+                            }, color: Color.fromRGBO(46,168,172, 1),
                               child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                                 Text("أرسل الطلب", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),),
                                 Padding(

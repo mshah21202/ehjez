@@ -11,11 +11,15 @@ class databaseHelper {
   static final _dbVersion = 1;
   static final _tableName = "requests";
 
-  static final _columnID = "_id";
-  static final _columnName = "name";
-  static final _columnNational = "nationalid";
-  static final _columnAge = "age";
-  static final _columnPhoneNo = "phoneNo";
+  static final columnID = "_id";
+  static final columnName = "name";
+  static final columnNational = "nationalid";
+  static final columnAge = "age";
+  static final columnPhoneNo = "phoneNo";
+  static final columnNationality = "Nationality";
+  static final columnQ1 = "Question1";
+  static final columnQ2 = "Question2";
+  static final columnQ3 = "Question3";
 
   databaseHelper._privateConstructor();
   static final databaseHelper instance = databaseHelper._privateConstructor();
@@ -25,13 +29,13 @@ class databaseHelper {
     if (_database != null){return _database;}
 
     _database = await _initiateDatabase();
-
+    return _database;
   }
 
   _initiateDatabase() async{
     Directory directory = await getApplicationDocumentsDirectory();
     String path = join(directory.path,_dbName);
-    await openDatabase(path, version: _dbVersion, onCreate: _onCreate);
+    return await openDatabase(path, version: _dbVersion, onCreate: _onCreate);
 
 
   }
@@ -39,12 +43,15 @@ class databaseHelper {
     db.execute(
       '''
       CREATE TABLE $_tableName (
-      $_columnID INTEGER PRIMARY KEY,
-      $_columnName TEXT NOT NULL,
-      $_columnNational TEXT NOT NULL,
-      $_columnAge INTEGER NOT NULL,
-      $_columnPhoneNo TEXT NOT NULL)
-      
+      $columnID INTEGER PRIMARY KEY,
+      $columnName TEXT NOT NULL,
+      $columnNational TEXT NOT NULL,
+      $columnAge INTEGER NOT NULL,
+      $columnPhoneNo TEXT NOT NULL,
+      $columnNationality INTEGER NOT NULL,
+      $columnQ1 INTEGER,
+      $columnQ2 INTEGER,
+      $columnQ3 INTEGER )
       '''
     );
 
@@ -62,14 +69,14 @@ class databaseHelper {
 
   Future<int> update(Map<String,dynamic> row) async {
     Database db = await instance.database;
-    int id = row[_columnID];
-    return await db.update(_tableName, row, where: '$_columnID = ?', whereArgs: [id]);
+    int id = row[columnID];
+    return await db.update(_tableName, row, where: '$columnID = ?', whereArgs: [id]);
   }
 
   Future<int> delete(Map<String,dynamic> row) async {
     Database db = await instance.database;
-    int id = row[_columnID];
-    return await db.delete(_tableName, where: '$_columnID = ?', whereArgs: [id]);
+    int id = row[columnID];
+    return await db.delete(_tableName, where: '$columnID = ?', whereArgs: [id]);
   }
 
 }

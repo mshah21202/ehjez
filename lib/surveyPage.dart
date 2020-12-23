@@ -1,5 +1,8 @@
+import 'package:ehjez/databaseHelper.dart';
 import 'package:flutter/material.dart';
 import "dart:ui";
+import 'package:ehjez/databaseHelper.dart';
+import 'surveyPage2.dart';
 
 class surveyPage extends StatefulWidget {
   @override
@@ -11,6 +14,13 @@ class _formKeys {
 }
 
 class _surveyPageState extends State<surveyPage> {
+
+  TextEditingController nameController = new TextEditingController();
+  TextEditingController nationalController = new TextEditingController();
+  TextEditingController ageController = new TextEditingController();
+  TextEditingController phoneController = new TextEditingController();
+
+
 
   int groupValue = 2;
   void group (int e){
@@ -100,7 +110,7 @@ class _surveyPageState extends State<surveyPage> {
                             child: Stack(
                               children: [Padding(
                                 padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                                child: TextFormField(
+                                child: TextFormField(controller: nameController,
                                   cursorColor: Colors.white,
                                   validator: (value){
                                   if (value.isEmpty){
@@ -151,7 +161,7 @@ class _surveyPageState extends State<surveyPage> {
                             child: Stack(
                                 children: [Padding(
                                   padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                                  child: TextFormField(
+                                  child: TextFormField(controller: nationalController,
                                     cursorColor: Colors.white,
                                     validator: (value){
                                     if (value.isEmpty){
@@ -202,7 +212,7 @@ class _surveyPageState extends State<surveyPage> {
                             child: Stack(
                                 children: [Padding(
                                   padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                                  child: TextFormField(
+                                  child: TextFormField(controller: ageController,
                                     cursorColor: Colors.white,
                                     validator: (value){
                                     if (value.isEmpty){
@@ -252,7 +262,7 @@ class _surveyPageState extends State<surveyPage> {
                             child: Stack(
                                 children: [Padding(
                                   padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                                  child: TextFormField(
+                                  child: TextFormField(controller: phoneController,
                                     cursorColor: Colors.white,
                                     validator: (value){
                                     if (value.isEmpty){
@@ -302,9 +312,23 @@ class _surveyPageState extends State<surveyPage> {
                             child: ButtonTheme(shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadiusDirectional.circular(20)
                             ),
-                              child: RaisedButton(onPressed: () {
+                              child: RaisedButton(onPressed: () async {
+                                int nationality = groupValue - 1;
+                                String name = nameController.text;
+                                print("$name");
+                                String national = nationalController.text;
+                                String age = ageController.text;
+                                String phone = phoneController.text;
                                 if (_formKeys.formKey5.currentState.validate()){
-                                  Navigator.pushNamed(context, '/survey2');
+                                  int i = await databaseHelper.instance.insert({
+                                    databaseHelper.columnName : '$name',
+                                    databaseHelper.columnNational : '$national',
+                                    databaseHelper.columnAge : '$age',
+                                    databaseHelper.columnPhoneNo : '$phone',
+                                    databaseHelper.columnNationality : '$nationality'
+                                  });
+                                  int requestID = i;
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => surveyPageSec(requestID)));
                                 };
 
                                 }, color: Color.fromRGBO(46,168,172, 1),
