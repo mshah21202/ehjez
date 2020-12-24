@@ -95,11 +95,14 @@ class privacyPolicy extends StatelessWidget {
             Container( padding: const EdgeInsets.fromLTRB(2, 0, 10, 0),
 
               child: Text(" قد يتم تخزين وجمع نوعين من المعلومات عنك  واستخدام بعض المعلومات الشخصية من خلال الموقع، مثل:"
-                  ,textAlign: TextAlign.right,style: TextStyle(
+                  ,textAlign: TextAlign.right,
+                  textDirection: TextDirection.rtl,
+                  style: TextStyle(
                     wordSpacing: 1,
                     fontSize: 15.0,
                     color: Colors.white,
-                    fontFamily: "ElMessiri",)  ),),
+                    fontFamily: "ElMessiri",
+                  )  ),),
 
 
 

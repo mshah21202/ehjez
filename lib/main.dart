@@ -30,7 +30,7 @@ void main() => runApp(MaterialApp(
     '/' : (context) => loginPage(),
     '/admin1' : (context) => adminMainPage(),
     '/review' : (context) => reviewRequest(),
-    '/account': (context) => youraccount(),
+    // '/account': (context) => youraccount(),
   },
 ));
 
