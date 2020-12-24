@@ -59,7 +59,7 @@ class Reservationscreen extends StatelessWidget {
                 child: ButtonTheme(shape: RoundedRectangleBorder(
                     borderRadius: BorderRadiusDirectional.circular(20)
                 ),
-                  child: RaisedButton(onPressed: () {}, color: Colors.white,
+                  child: RaisedButton(onPressed: () {Navigator.pushNamed(context, '/review');}, color: Colors.white,
                     child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                       Text("تابع طلبك", style: TextStyle(color: Color.fromRGBO(46,168,172, 1), fontFamily: "ElMessiri", fontSize: 25),),
                       Padding(
