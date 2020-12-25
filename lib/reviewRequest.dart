@@ -7,13 +7,17 @@ class reviewRequest extends StatefulWidget {
   _reviewRequestState createState() => _reviewRequestState();
 }
 
+
 class _reviewRequestState extends State<reviewRequest>{
+
   var futureBuilder = new FutureBuilder(
     future: _getData(),
     builder: (context, snapshot) {
     return createListView(context, snapshot);
     },
   );
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,6 +76,7 @@ class _reviewRequestState extends State<reviewRequest>{
 }
 
 Widget createListView(BuildContext context, AsyncSnapshot snapshot) {
+  bool isButtonDisabled;
   print(1);
   List values = snapshot.data;
   print(values);
@@ -80,10 +85,84 @@ Widget createListView(BuildContext context, AsyncSnapshot snapshot) {
     scrollDirection: Axis.vertical,
     itemCount: values.length,
     itemBuilder: (BuildContext context, int index){
+      if (values[index].row[9] == 1){
+        isButtonDisabled = false;
+      } else {
+        isButtonDisabled = true;
+      }
       return new Column(
         children: [
-          new ListTile(
-            title: new Text(values[index].row[2]),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 20, 0, 8),
+            child: Container(
+              decoration: BoxDecoration(color: Colors.white,
+                boxShadow: [BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  spreadRadius: 5,
+                  blurRadius: 5,
+                  offset: Offset(0, 7)
+                )]
+              ),
+              width: double.infinity,
+              height: 150,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    child: ButtonTheme(shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusDirectional.circular(8)
+                    ),
+                      child: FlatButton(height: 50, minWidth: 100,
+                        onPressed: isButtonDisabled ? null : (){},
+                        child: Text("تعديل",
+                          style: TextStyle(fontSize: 20,
+                              color: Colors.white
+                          ),
+                        ),
+                        color: Colors.teal[300],
+                        disabledColor: Colors.grey[600],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new ListTile(
+                      title: Column(crossAxisAlignment: CrossAxisAlignment.end, mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          new RichText(textDirection: TextDirection.rtl,
+                            textAlign: TextAlign.right,
+                            text: new TextSpan(
+                                style: TextStyle(color: Colors.black, fontSize: 18),
+                                children: [
+                              new TextSpan(text: "الإسم: "),
+                              new TextSpan(text: values[index].row[1], style: TextStyle(fontWeight: FontWeight.bold))
+                            ]),
+                          ),
+                          new RichText(textDirection: TextDirection.rtl,
+                            textAlign: TextAlign.right,
+                            text: new TextSpan(
+                                style: TextStyle(color: Colors.black, fontSize: 18),
+                                children: [
+                                  new TextSpan(text: (values[index].row[5] == 1) ? "رقم الهوية: " : "رقم جواز السفر: "),
+                                  new TextSpan(text: values[index].row[2], style: TextStyle(fontWeight: FontWeight.bold))
+                                ]),
+                          ),
+                          new RichText(textDirection: TextDirection.rtl,
+                            textAlign: TextAlign.right,
+                            text: new TextSpan(
+                                style: TextStyle(color: Colors.black, fontSize: 18),
+                                children: [
+                                  new TextSpan(text: "الجنسية: "),
+                                  new TextSpan(text: (values[index].row[5] == 1) ? "أردني" : "جنسيه أخرى", style: TextStyle(fontWeight: FontWeight.bold))
+                                ]),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Icon(Icons.autorenew_sharp, color: Colors.teal[300], size: 75,)
+                ],
+              ),
+            ),
           )
         ],
       );

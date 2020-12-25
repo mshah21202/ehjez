@@ -161,7 +161,7 @@ class _loginPageState extends State<loginPage> {
                           };
                           },color: Color.fromRGBO(46,168,172, 1),
                           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                            Text("التالي", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),),
+                            Text("تسجيل الدخول", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),),
                             Padding(
                               padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
                               child: Icon(Icons.arrow_forward_outlined, color: Colors.white,),

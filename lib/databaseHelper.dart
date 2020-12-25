@@ -20,6 +20,7 @@ class databaseHelper {
   static final columnQ1 = "Question1";
   static final columnQ2 = "Question2";
   static final columnQ3 = "Question3";
+  static final columnStatus = "Status";
 
   databaseHelper._privateConstructor();
   static final databaseHelper instance = databaseHelper._privateConstructor();
@@ -51,7 +52,9 @@ class databaseHelper {
       $columnNationality INTEGER NOT NULL,
       $columnQ1 INTEGER,
       $columnQ2 INTEGER,
-      $columnQ3 INTEGER )
+      $columnQ3 INTEGER,
+      $columnStatus INTEGER DEFAULT 1
+      )
       '''
     );
 
