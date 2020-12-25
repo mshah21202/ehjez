@@ -348,7 +348,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -361,7 +361,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -375,7 +375,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -389,7 +389,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -404,7 +404,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -418,7 +418,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -432,7 +432,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                  ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -445,7 +445,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -473,7 +473,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -487,7 +487,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -502,7 +502,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -529,7 +529,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
@@ -543,7 +543,7 @@ class privacyPolicy extends StatelessWidget {
                   ,textDirection: TextDirection.rtl
                   ,textAlign: TextAlign.right,style: TextStyle(
                     wordSpacing: 1,
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                     color: Colors.white,
                     fontFamily: "ElMessiri",)  ),),
 
