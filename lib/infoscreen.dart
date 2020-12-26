@@ -139,17 +139,17 @@ class infoscreen  extends StatelessWidget {
 
                                     Container(
                                       padding: const EdgeInsets.fromLTRB(
-                                          10, 5, 10, 2),
+                                          10, 2, 10, 2),
                                       child: ButtonTheme(
                                         height: 2,
                                         child: FlatButton(
                                           color: Colors.transparent,
                                           splashColor: Colors.black26,
                                           onPressed: () {
-                                            firsturl();
+                                            secondurl();
                                           },
                                           child: Text(
-                                              "تقييم التطبيق",
+                                              "موقع الوزارة",
                                               textAlign: TextAlign.right,
                                               style: TextStyle(
                                                   fontFamily: 'ElMessiri',
@@ -157,7 +157,6 @@ class infoscreen  extends StatelessWidget {
                                                   fontSize: 18,
                                                   color: Colors.white)),
                                         ),
-
                                       ),
                                     ),
 
@@ -212,19 +211,20 @@ class infoscreen  extends StatelessWidget {
                                     ),
 
 
+
                                     Container(
                                       padding: const EdgeInsets.fromLTRB(
-                                          10, 2, 10, 2),
+                                          10, 5, 10, 2),
                                       child: ButtonTheme(
                                         height: 2,
                                         child: FlatButton(
                                           color: Colors.transparent,
                                           splashColor: Colors.black26,
                                           onPressed: () {
-                                           secondurl();
+                                            firsturl();
                                           },
                                           child: Text(
-                                              "موقع الوزارة",
+                                              "تقييم التطبيق",
                                               textAlign: TextAlign.right,
                                               style: TextStyle(
                                                   fontFamily: 'ElMessiri',
@@ -232,9 +232,9 @@ class infoscreen  extends StatelessWidget {
                                                   fontSize: 18,
                                                   color: Colors.white)),
                                         ),
+
                                       ),
                                     ),
-
                                   ]
                               )
                           )
