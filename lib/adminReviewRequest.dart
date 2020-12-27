@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:ehjez/adminMainPage.dart';
 import 'package:flutter/material.dart';
 import 'databaseHelper.dart';
 
@@ -15,7 +16,7 @@ class adminReviewRequest extends StatefulWidget {
 class _adminReviewRequestState extends State<adminReviewRequest> {
   @override
   Widget build(BuildContext context) {
-    int IndexID = widget.indexID+1;
+    int IndexID = widget.indexID;
     var futureBuilder = new FutureBuilder(
       future: _getData(),
       builder: (context, snapshot) {
@@ -55,10 +56,11 @@ class _adminReviewRequestState extends State<adminReviewRequest> {
                           child: RaisedButton(
                             onPressed: () async {
                               int result = await databaseHelper.instance.update({
-                                databaseHelper.columnID: IndexID,
+                                databaseHelper.columnID: IndexID+1,
                                 databaseHelper.columnStatus: 2
                               });
                               print(result);
+                              Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => adminMainPage()), (Route<dynamic> route) => false);
                             },
                             child: Text("مقبول",
                               style: TextStyle(
@@ -73,7 +75,14 @@ class _adminReviewRequestState extends State<adminReviewRequest> {
                           height: 70,
                           minWidth: 150,
                           child: RaisedButton(
-                            onPressed: (){},
+                            onPressed: () async {
+                              int result = await databaseHelper.instance.update({
+                                databaseHelper.columnID: IndexID+1,
+                                databaseHelper.columnStatus: 3
+                              });
+                              print(result);
+                              Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => adminMainPage()), (Route<dynamic> route) => false);
+                            },
                             child: Text("مرفوض",
                               style: TextStyle(
                                   color: Colors.white,
