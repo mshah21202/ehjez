@@ -1,11 +1,15 @@
 import 'package:ehjez/ReservationScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 void main() {
   runApp(helpscreen());
 }
+void customLaunch(command)async
+{
+  if (await canLaunch(command)){await launch(command);}else {print('could not launch $command');}
 
-
+}
 class helpscreen extends StatefulWidget {
 
 
@@ -17,7 +21,7 @@ class _helpscreenState extends State<helpscreen> {
   bool avisible = false;
   bool bVisible = false;
   bool cVisible = false;
-  bool dVisible =false;
+  bool dVisible = false;
   bool eVisible = false;
   bool fVisible = false;
   bool gVisible = false;
@@ -56,6 +60,7 @@ class _helpscreenState extends State<helpscreen> {
           Center(
           child: Padding(padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
             child: Text("اسألة متكررة",
+                textDirection: TextDirection.rtl,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 25.0,
@@ -64,34 +69,44 @@ class _helpscreenState extends State<helpscreen> {
                     fontFamily: "ElMessiri")),
           ),),
 
-          Padding(
-            padding: const EdgeInsets.fromLTRB(15, 20, 15, 8),
-            child: ButtonTheme(shape: RoundedRectangleBorder(
-                borderRadius: BorderRadiusDirectional.circular(10)
-            ),
-              child: RaisedButton(onPressed: () {setState(() {avisible = !avisible;
+            Padding(
+        padding: const EdgeInsets.fromLTRB(15, 20, 15, 8),
+          child: ButtonTheme(shape: RoundedRectangleBorder(
+              borderRadius: BorderRadiusDirectional.circular(10)
+          ),
+            child: RaisedButton(onPressed: () {setState(() {avisible = !avisible;
 
-              });},
-                color: Colors.grey[600].withOpacity(0.4),
-                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text("هل لقاح كورونا إجباري لجميع الأفراد؟", style: TextStyle(
+            });},
+              color: Colors.grey[600].withOpacity(0.4),
+              child: Row(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
+                children: [Expanded(child:
+                Text("هل لقاح كورونا إجباري لجميع الأفراد؟",
+                  textDirection: TextDirection.rtl,
+                  style: TextStyle(
                       color: Colors.white,
                       fontFamily: "ElMessiri",
-                      fontSize: 17),),
+                      fontSize: 15),),),
+
                   Padding(
                     padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
                     child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
                   )
                 ],)
-                ,),
-            ),
+              ,),
           ),
-          Visibility(visible: avisible,
-              child: Text("لقاح كورونا حالياً هو اختياري، ولكن ننصح المواطنين والمقيمين بالمملكة بأخذ اللقاح حفاظاً على أنفسهم وعائلاتهم والمجتمع ككل.",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: "ElMessiri",
-                  fontSize: 15),)),
+        ),
+            Padding(padding: EdgeInsets.fromLTRB(10, 3,10, 0),
+                child: Row(children: [Expanded(child: Visibility(visible: avisible,
+                    child: Text("لقاح كورونا حالياً هو اختياري، ولكن ننصح المواطنين والمقيمين بالمملكة بأخذ اللقاح حفاظاً على أنفسهم وعائلاتهم والمجتمع ككل."
+                      ,
+                      textDirection: TextDirection.rtl,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: "ElMessiri",
+                          fontSize: 15),)),)])),
+
+
+
 
 
 
@@ -104,28 +119,31 @@ class _helpscreenState extends State<helpscreen> {
 
               });},
                 color: Colors.grey[600].withOpacity(0.4),
-                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text("ما هي فعالية لقاح كورونا وكم عدد جرعات التي ينبغي أن يأخذها الشخص؟", style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: "ElMessiri",
-                      fontSize: 7),),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
-                    child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
-                  )
-                ],)
+                child: Row(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [Expanded(child:
+                  Text("ما هي فعالية لقاح كورونا وكم عدد جرعات التي ينبغي أن يأخذها الشخص؟",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),),),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
+                      child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
+                    )
+                  ],)
                 ,),
             ),
           ),
-          Visibility(visible: bVisible,
-              child: Text("المؤسسة العامة للغذاء والدواء في الأردن منحت ترخيصاً طارئاً لاستعمال لقاح فايزر/بايونتيك لمكافحة انتشار وباء كوفيد-19، وأظهرت البيانات أن مفعول اللقاح يبدأ بعد الجرعة الأولى بفترة وجيزة، وأن نسبة فعاليته 95٪ بعد سبعة أيام من الجرعة الثانية. ويعني هذا أن أكثر من 95٪ من الأشخاص الذين يأخذون اللقاح يتمتعون بالحماية من الإصابة بمرض شديد ناتج عن الفيروس. وهذا اللقاح للأشخاص بعمر 16 سنة فأكثر. ويتطلب أخذ حقنتين يفصل بينهما 21 يومًا.",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "ElMessiri",
-                    fontSize: 15),)),
-
-
-
+          Padding(padding: EdgeInsets.fromLTRB(10, 3,10, 0),
+              child: Row(children: [Expanded(child: Visibility(visible: bVisible,
+                  child: Text("المؤسسة العامة للغذاء والدواء في الأردن منحت ترخيصاً طارئاً لاستعمال لقاح فايزر/بايونتيك لمكافحة انتشار الوباء، وأظهرت البيانات أن نسبة فعالية اللقاح تقدر ب 95٪، ويعني هذا أن أكثر من 95٪ من الأشخاص الذين يأخذون اللقاح يتمتعون بالحماية من الإصابة بمرض شديد ناتج عن الفيروس. وهذا اللقاح للأشخاص بعمر 16 سنة فأكثر، ويتطلب أخذ حقنتين يفصل بينهما 21 يومًا.",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),)),)])),
 
 
 
@@ -140,56 +158,34 @@ class _helpscreenState extends State<helpscreen> {
 
               });},
                 color: Colors.grey[600].withOpacity(0.4),
-                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text("هل يمكنني تعديل الطلب بعد التسجيل؟", style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: "ElMessiri",
-                      fontSize: 7),),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
-                    child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
-                  )
-                ],)
+                child: Row(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [Expanded(child:
+                  Text("هل يمكنني تعديل الطلب بعد التسجيل؟",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),),),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
+                      child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
+                    )
+                  ],)
                 ,),
             ),
           ),
-          Visibility(visible: cVisible,
-              child: Text("نعم، يمكن تعديل الطلب بعد التسجيل.",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "ElMessiri",
-                    fontSize: 15),)),
+          Padding(padding: EdgeInsets.fromLTRB(10, 3,10, 0),
+              child: Row(children: [Expanded(child: Visibility(visible: cVisible,
+                  child: Text("نعم، يمكن تعديل الطلب بعد التسجيل.",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),)),)])),
 
 
 
-          Padding(
-            padding: const EdgeInsets.fromLTRB(15, 20, 15, 8),
-            child: ButtonTheme(shape: RoundedRectangleBorder(
-                borderRadius: BorderRadiusDirectional.circular(10)
-            ),
-              child: RaisedButton(onPressed: () {setState(() {eVisible = !eVisible;
-
-              });},
-                color: Colors.grey[600].withOpacity(0.4),
-                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text("هل يمكنني تعديل الطلب بعد التسجيل؟", style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: "ElMessiri",
-                      fontSize: 7),),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
-                    child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
-                  )
-                ],)
-                ,),
-            ),
-          ),
-          Visibility(visible: eVisible,
-              child: Text("نعم، يمكن تعديل الطلب بعد التسجيل.",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "ElMessiri",
-                    fontSize: 15),)),
 
 
 
@@ -205,25 +201,76 @@ class _helpscreenState extends State<helpscreen> {
 
               });},
                 color: Colors.grey[600].withOpacity(0.4),
-                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text("هل هناك أي آثار جانبية للقاح؟", style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: "ElMessiri",
-                      fontSize: 7),),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
-                    child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
-                  )
-                ],)
+                child: Row(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [Expanded(child:
+                  Text("هل هناك أي آثار جانبية للقاح؟",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),),),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
+                      child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
+                    )
+                  ],)
                 ,),
             ),
           ),
-          Visibility(visible: dVisible,
-              child: Text("يمكن أن يسبب لقاح كوفيد 19 آثارًا جانبية طفيفة بعد الجرعة الأولى أو الثانية، وتشمل: الألم أو التورم أو الاحمرار في مكان حقن اللقاح، الحمّى، الإرهاق، الصداع، القشعريرة، ألم في العضلات، والمفاصل",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "ElMessiri",
-                    fontSize: 15),)),
+          Padding(padding: EdgeInsets.fromLTRB(10, 3,10, 0),
+              child: Row(children: [Expanded(child: Visibility(visible: dVisible,
+                  child: Text("يمكن أن يسبب لقاح كوفيد 19 آثارًا جانبية طفيفة بعد الجرعة الأولى أو الثانية، وتشمل: الألم أو الاحمرار أو التورم في مكان حقن اللقاح، الحُمّى، الإرهاق، الصداع، القشعريرة، ألم العضلات والمفاصب",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),)),)])),
+
+
+
+
+
+
+
+
+
+
+          Padding(
+            padding: const EdgeInsets.fromLTRB(15, 20, 15, 8),
+            child: ButtonTheme(shape: RoundedRectangleBorder(
+                borderRadius: BorderRadiusDirectional.circular(10)
+            ),
+              child: RaisedButton(onPressed: () {setState(() {eVisible = !eVisible;
+
+              });},
+                color: Colors.grey[600].withOpacity(0.4),
+                child: Row(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [Expanded(child:
+                  Text("هل يعمل التطبيق على جميع الهواتف الذكية؟",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),),),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
+                      child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
+                    )
+                  ],)
+                ,),
+            ),
+          ),
+          Padding(padding: EdgeInsets.fromLTRB(10, 3,10, 0),
+              child: Row(children: [Expanded(child: Visibility(visible: eVisible,
+                  child: Text("نعم، يعمل التطبيق على الهواتف الذكية التي تعمل بنظامي التشغيل (iOS) وأندرويد (Android)",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),)),)])),
+
 
 
 
@@ -240,25 +287,36 @@ class _helpscreenState extends State<helpscreen> {
 
               });},
                 color: Colors.grey[600].withOpacity(0.4),
-                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text("هل يعمل التطبيق على جميع الهواتف الذكية؟", style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: "ElMessiri",
-                      fontSize: 7),),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
-                    child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
-                  )
-                ],)
+                child: Row(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [Expanded(child:
+                  Text("هل أستطيع أخذ اللقاح وأنا مصاب بفيروس كورونا؟",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),),),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
+                      child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
+                    )
+                  ],)
                 ,),
             ),
           ),
-          Visibility(visible: fVisible,
-              child: Text("نعم، يعمل التطبيق على الهواتف الذكية التي تعمل بنظامي التشغيل (iOS) وأندرويد (Android)",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "ElMessiri",
-                    fontSize: 15),)),
+          Padding(padding: EdgeInsets.fromLTRB(10, 3,10, 0),
+              child: Row(children: [Expanded(child: Visibility(visible: fVisible,
+                  child: Text("لا يفضل أخذ اللقاح لمن شخصوا بالإصابة بالفيروس، ولم يتحدد بعد الحد الأدنى للفترة الزمنية الموصى بها للتطعيم بعد التعافي.",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),)),)])),
+
+
+
+
+
 
 
 
@@ -273,25 +331,33 @@ class _helpscreenState extends State<helpscreen> {
 
               });},
                 color: Colors.grey[600].withOpacity(0.4),
-                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text("هل أستطيع أخذ اللقاح وأنا مصاب بفيروس كورونا؟", style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: "ElMessiri",
-                      fontSize: 7),),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
-                    child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
-                  )
-                ],)
+                child: Row(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [Expanded(child:
+                  Text("هل يجب الالتزام بارتداء كمامة والتباعد الجسماني بعد تلقي اللقاح؟",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),),),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
+                      child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
+                    )
+                  ],)
                 ,),
             ),
           ),
-          Visibility(visible: gVisible,
-              child: Text("لا يفضل أخذ اللقاح لمن شخصوا بالإصابة بالفيروس، ولم يتحدد بعد الحد الأدنى للفترة الزمنية الموصى بها للتطعيم بعد التعافي.",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "ElMessiri",
-                    fontSize: 15),)),
+          Padding(padding: EdgeInsets.fromLTRB(10, 3,10, 0),
+              child: Row(children: [Expanded(child: Visibility(visible: gVisible,
+                  child: Text("نعم، يمكن تعديل الطلب بعد التسجيل.",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),)),)])),
+
+
 
 
 
@@ -306,25 +372,98 @@ class _helpscreenState extends State<helpscreen> {
 
               });},
                 color: Colors.grey[600].withOpacity(0.4),
+                child: Row(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [Expanded(child:
+                  Text("ما هي فعالية لقاح كورونا وكم عدد جرعات التي ينبغي أن يأخذها الشخص؟",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),),),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
+                      child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
+                    )
+                  ],)
+                ,),
+            ),
+          ),
+          Padding(padding: EdgeInsets.fromLTRB(10, 3,10, 0),
+              child: Row(children: [Expanded(child: Visibility(visible: hVisible,
+                  child: Text("نعم، حتى بعد الموافقة على بدء حملات التطعيم باللقاح، يقول الخبراء ستبقى هناك ضرورة للاستمرار في ارتداء الكمامات والالتزام بمسافات التباعد الجسماني.",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "ElMessiri",
+                        fontSize: 15),)),)])),
+
+
+          Padding(
+            padding: const EdgeInsets.fromLTRB(40, 20, 40, 0),
+
                 child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text("هل يجب الالتزام بارتداء كمامة والتباعد الجسماني بعد تلقي اللقاح؟", style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: "ElMessiri",
-                      fontSize: 7),),
+                  Text("تريد التواصل معنا؟", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 18),),
+
+                ],)
+                ,),
+
+
+
+
+
+          Padding(
+            padding: const EdgeInsets.fromLTRB(40, 20, 40, 0),
+            child: ButtonTheme(shape: RoundedRectangleBorder(
+                borderRadius: BorderRadiusDirectional.circular(20)
+            ),
+              child: RaisedButton(onPressed: () {
+                customLaunch('tel: (06) 520 0230');
+
+              }, color: Color.fromRGBO(46,168,172, 1),
+                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Text("تواصل معنا(الهاتف)", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
-                    child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
+                    child: Icon(Icons.local_phone_rounded, color: Colors.white,),
                   )
                 ],)
                 ,),
             ),
           ),
-          Visibility(visible: hVisible,
-              child: Text("نعم، حتى بعد الموافقة على بدء حملات التطعيم باللقاح، يقول الخبراء ستبقى هناك ضرورة للاستمرار في ارتداء الكمامات والأقنعة الواقية والالتزام بمسافات التباعد الجسماني، ويرجع ذلك جزئيا إلى أن جرعات اللقاح ستكون محدودة، وسيستغرق الأمر وقتًا لتحصين عدد كافٍ من سكان كل بلد لإبطاء والقضاء على دورة انتشار فيروس كورونا تدريجيًا. ويتوقع الخبراء أن العودة إلى الحياة الطبيعية ربما يستغرق عدة أشهر أو أكثر..",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "ElMessiri",
-                    fontSize: 15),)),
+
+
+
+          Padding(
+            padding: const EdgeInsets.fromLTRB(40, 20, 40, 0),
+
+            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text("او", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 18),),
+
+            ],)
+            ,),
+
+
+
+          Padding(
+            padding: const EdgeInsets.fromLTRB(40, 20, 40, 0),
+            child: ButtonTheme(shape: RoundedRectangleBorder(
+                borderRadius: BorderRadiusDirectional.circular(20)
+            ),
+              child: RaisedButton(onPressed: () {
+                customLaunch('mailto:diwan@moh.gov.jo');
+
+              }, color: Color.fromRGBO(46,168,172, 1),
+                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Text("تواصل معنا", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
+                    child: Icon(Icons.email_outlined, color: Colors.white,),
+                  )
+                ],)
+                ,),
+            ),
+          ),
 
 
 
@@ -334,6 +473,9 @@ class _helpscreenState extends State<helpscreen> {
 
 
 
-    ]))))))));
+
+
+
+        ]))))))));
   }
 }
