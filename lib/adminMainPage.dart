@@ -146,7 +146,7 @@ class _createListViewState extends State<createListView> {
                       ),
                         child: FlatButton(height: 50, minWidth: 100,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => adminReviewRequest(indexID: index++,)));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => adminReviewRequest(index)));
                           },
                           child: Text("مراجعة",
                             style: TextStyle(fontSize: 20,

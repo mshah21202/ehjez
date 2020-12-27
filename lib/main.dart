@@ -12,6 +12,7 @@ import 'package:ehjez/feedback.dart';
 import 'package:ehjez/loginPage.dart';
 import 'adminMainPage.dart';
 import 'package:ehjez/reviewRequest.dart';
+import 'adminReviewRequest.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute: '/splash',
