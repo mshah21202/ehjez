@@ -1,17 +1,18 @@
 import 'dart:async';
 
-import 'package:ehjez/adminReviewRequest.dart';
 import 'package:flutter/material.dart';
 import 'databaseHelper.dart';
 
 
-class adminMainPage extends StatefulWidget {
+class adminReviewRequest extends StatefulWidget {
+  final int indexID;
+  adminReviewRequest({this.indexID, Key key}): super(key: key);
 
   @override
-  _adminMainPageState createState() => _adminMainPageState();
+  _adminReviewRequestState createState() => _adminReviewRequestState();
 }
 
-class _adminMainPageState extends State<adminMainPage> {
+class _adminReviewRequestState extends State<adminReviewRequest> {
   @override
   var futureBuilder = new FutureBuilder(
     future: _getData(),
@@ -21,73 +22,73 @@ class _adminMainPageState extends State<adminMainPage> {
   );
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
-       backgroundColor: Colors.teal[300],
+    return Scaffold(
+      backgroundColor: Colors.teal[300],
       body: Stack(
-        children: [
-          SafeArea(
-            child: new Container(
-            width: double.infinity,
-            height: double.infinity,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.bottomLeft,
-                end: Alignment.topRight,
-                colors: [
-                  Color.fromRGBO(31, 112, 138, 1),
-                  Color.fromRGBO(64, 162, 117, 1)
-                ],
-              ),
-            ),
-        ),
-          ),
-          SafeArea(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0,20,0,0),
-                  child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      ButtonTheme(
-                        height: 70,
-                        minWidth: 110,
-                        child: RaisedButton(
-                          onPressed: (){},
-                          child: Text("غير مراجع",
-                            style: TextStyle(color: Colors.white),),
-                          color: Colors.teal[800],
-                        ),
-                      ),
-                      ButtonTheme(
-                        height: 70,
-                        minWidth: 110,
-                        child: RaisedButton(
-                          onPressed: (){},
-                          child: Text("مقبول",
-                            style: TextStyle(color: Colors.white),),
-                          color: Colors.teal[800],
-                        ),
-                      ),
-                      ButtonTheme(
-                        height: 70,
-                        minWidth: 110,
-                        child: RaisedButton(
-                          onPressed: (){},
-                          child: Text("مرفوض",
-                            style: TextStyle(color: Colors.white),),
-                          color: Colors.teal[800],
-                        ),
-                      ),
+          children: [
+            SafeArea(
+              child: new Container(
+                width: double.infinity,
+                height: double.infinity,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                    colors: [
+                      Color.fromRGBO(31, 112, 138, 1),
+                      Color.fromRGBO(64, 162, 117, 1)
                     ],
                   ),
                 ),
-                futureBuilder
-              ],
+              ),
             ),
-          )
-        ]
+            SafeArea(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0,20,0,0),
+                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        ButtonTheme(
+                          height: 70,
+                          minWidth: 110,
+                          child: RaisedButton(
+                            onPressed: (){},
+                            child: Text("غير مراجع",
+                              style: TextStyle(color: Colors.white),),
+                            color: Colors.teal[800],
+                          ),
+                        ),
+                        ButtonTheme(
+                          height: 70,
+                          minWidth: 110,
+                          child: RaisedButton(
+                            onPressed: (){},
+                            child: Text("مقبول",
+                              style: TextStyle(color: Colors.white),),
+                            color: Colors.teal[800],
+                          ),
+                        ),
+                        ButtonTheme(
+                          height: 70,
+                          minWidth: 110,
+                          child: RaisedButton(
+                            onPressed: (){},
+                            child: Text("مرفوض",
+                              style: TextStyle(color: Colors.white),),
+                            color: Colors.teal[800],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  futureBuilder
+                ],
+              ),
+            )
+          ]
       ),
-     );
+    );
   }
 }
 
@@ -146,7 +147,7 @@ class _createListViewState extends State<createListView> {
                       ),
                         child: FlatButton(height: 50, minWidth: 100,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => adminReviewRequest(indexID: index++,)));
+
                           },
                           child: Text("مراجعة",
                             style: TextStyle(fontSize: 20,
