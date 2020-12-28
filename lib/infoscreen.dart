@@ -259,7 +259,7 @@ class infoscreen  extends StatelessWidget {
   }
 
   secondurl() {
-    String googlestorelink = "https://portal.jordan.gov.jo/wps/portal/Home/GovernmentEntities/Ministries/Ministry/Ministry%20of%20Health?nameEntity=Ministry%20of%20Health&entityType=ministry&lang=en&isFromLangChange=yes";
+    String googlestorelink = "https://www.google.com/";
     launch(googlestorelink);
   }
 

@@ -36,7 +36,7 @@ class _helpscreenState extends State<helpscreen> {
         backgroundColor: Colors.teal[300],
         body: SingleChildScrollView(child: SafeArea(
         child: Container(
-        height: 1500,
+        height: 1700,
         width: MediaQuery
             .of(context)
         .size
