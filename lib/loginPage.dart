@@ -154,9 +154,9 @@ class _loginPageState extends State<loginPage> {
                         child: RaisedButton(onPressed: () {
                           if (_formKey.currentState.validate()){
                             if (usernameController.text == "100000" && passwordController.text == "100000") {
-                              Navigator.pushReplacementNamed(context, '/admin1');
+                              Navigator.pushNamed(context, '/admin1');
                             } else if (usernameController.text == "1" && passwordController.text == "1") {
-                              Navigator.pushReplacementNamed(context, '/main');
+                              Navigator.pushNamed(context, '/main');
                             };
                           };
                           },color: Color.fromRGBO(46,168,172, 1),
