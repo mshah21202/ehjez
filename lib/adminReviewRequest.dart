@@ -132,17 +132,45 @@ class _createListViewState extends State<createListView> {
       scrollDirection: Axis.vertical,
       itemCount: values.length,
       itemBuilder: (BuildContext context, int index){
-        return new Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(values[indexID].row[1]),
-            Text(values[indexID].row[2].toString()),
-            Text(values[indexID].row[3].toString()),
-            Text(values[indexID].row[4].toString()),
-            Text((values[indexID].row[5] == 1) ? "أردني":"جنسية أخرى"),
-            Text((values[indexID].row[6] == 1) ? "لديه أمراض مزمنة": "ليس لديه أمراض مزمنة"),
-            Text((values[indexID].row[7] == 1) ? "خضع لعملية جراحية مؤخراً": "لم يخضع لعملية جراحية مؤخراً"),
-            Text((values[indexID].row[8] == 1) ? "كان مصاب":"لم يصب من قبل"),
-          ],
+        return ListTile(
+          title: Container(color: Colors.white, width: double.infinity, margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
+            child: new Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 20, 20, 25),
+                  child: Text("الأسم:  " + values[indexID].row[1], textDirection: TextDirection.rtl,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 20, 25),
+                  child: Text("رقم الوطني:  " + values[indexID].row[2].toString(), textDirection: TextDirection.rtl,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 20, 25),
+                  child: Text("العمر:  " + values[indexID].row[3].toString(), textDirection: TextDirection.rtl,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 20, 25),
+                  child: Text("رقم الهاتف:  " + values[indexID].row[4].toString(), textDirection: TextDirection.rtl,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 20, 25),
+                  child: Text("الجنسية:  " + ((values[indexID].row[5] == 1) ? "أردني":"جنسية أخرى"), textDirection: TextDirection.rtl,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 20, 25),
+                  child: Text("أمراض مزمنة:  " + ((values[indexID].row[6] == 1) ? "لديه أمراض مزمنة": "ليس لديه أمراض مزمنة"), textDirection: TextDirection.rtl,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 20, 25),
+                  child: Text("عملية:  " + ((values[indexID].row[7] == 1) ? "خضع لعملية جراحية مؤخراً": "لم يخضع لعملية جراحية مؤخراً"), textDirection: TextDirection.rtl,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 20, 25),
+                  child: Text("أصيب:  " + ((values[indexID].row[8] == 1) ? "كان مصاب":"لم يصب من قبل"), textDirection: TextDirection.rtl,),
+                ),
+              ],
+            ),
+          ),
         );
       },
     );
