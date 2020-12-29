@@ -78,7 +78,7 @@ class Reservationscreen extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(40, 0, 40, 10),
                 child: Container(
                   child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                    Text("إملأ الطلب", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),),
+                    Text("1.  إملأ الطلب", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),textDirection: TextDirection.rtl,),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(35, 0, 40, 0),
                       child: Icon(Icons.description, color: Colors.white, size: 50,),
@@ -100,7 +100,7 @@ class Reservationscreen extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(35, 0, 10, 0),
                       child: Icon(Icons.send, color: Colors.white, size: 50,),
                     ),
-                    Text("أرسل الطلب", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),),
+                    Text("2.  أرسل الطلب", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),),
 
                   ],),
                   width: double.infinity,
@@ -115,7 +115,7 @@ class Reservationscreen extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
                 child: Container(
                   child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                    Text("إنتظر القبول", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),),
+                    Text("3.  إنتظر القبول", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),textDirection: TextDirection.rtl,),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(35, 0, 40, 0),
                       child: Icon(Icons.watch_later, color: Colors.white, size: 50,),

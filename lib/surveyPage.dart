@@ -328,7 +328,7 @@ class _surveyPageState extends State<surveyPage> {
                                     databaseHelper.columnNationality : '$nationality'
                                   });
                                   int requestID = i;
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => surveyPageSec(requestID)));
+                                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => surveyPageSec(requestID)));
                                 };
 
                                 }, color: Color.fromRGBO(46,168,172, 1),
