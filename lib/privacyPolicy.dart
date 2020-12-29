@@ -8,7 +8,7 @@ class privacyPolicy extends StatelessWidget {
         backgroundColor: Colors.teal[300],
         body: SingleChildScrollView(child: SafeArea(
         child: Container(
-        height:3250 ,
+        height:3050 ,
         width: MediaQuery.of(context).size.width,
     child: Center(
     child: new Container(

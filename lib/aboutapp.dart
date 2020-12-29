@@ -31,19 +31,13 @@ class aboutApp extends StatelessWidget {
                             Container( padding: EdgeInsets.only(
                               bottom: 2,
                             ),
-                                decoration: BoxDecoration(
-                                    border: Border(bottom: BorderSide(
-                                      color: Colors.white,
-                                      width: 3.0,
-                                    ))
-                                ),
+
                                 child: Text(
                                   'عن برنامج إحجز',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     wordSpacing: 0,
-                                    fontStyle: FontStyle.italic,
-                                    fontSize: 22.0,
+                                    fontSize: 25.0,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                     fontFamily: "ElMessiri",
@@ -52,7 +46,7 @@ class aboutApp extends StatelessWidget {
 
 
 
-                            Container( padding: const EdgeInsets.fromLTRB(15, 26, 8, 10),
+                            Container( padding: const EdgeInsets.fromLTRB(15, 20, 8, 10),
 
                               child: Text(" ابتكر تطبيق احجز في سبيل تسهيل الحصول على لقاح كورونا عبر الهواتف الذكية, من خلال إمكانية حجز مواعيد لك ولعائلتك في المراكز الصحية والمستشفيات المعتمدة من وزارة الصحة لإعطاء اللقاح، وذلك في إطار دعم الجهود الحكومية لاحتواء جائحة كورونا، ويتميز هذا التطبيق بسهولة وسرعة الاستخدام وحفظ خصوصية المستخدم، بالإضافة لتوفير الوقت والجهد، كما يمكن أن يساهم أيضاً في تقليل نسبة الإصابة بالعدوى من المستشفيات، علاوةً على ذلك سيكون التسجيل فيه متاحًا للأفراد من مواطنين ووافدين، كما سيعمل على توفير أحدث التنبيهات والأخبار الطبيّة الصادرة من وزارة الصحة عن الفيروس وانتشاره وسبل الوقاية منه، وتجدر الإشارة إلى أن العمل على تطوير وتحديث هذا التطبيق يجري بشكل مستمر وذلك بإضافة المزيد من الخصائص والمزايا في التحديثات القادمة."
                                   ,textAlign: TextAlign.center,style: TextStyle(
