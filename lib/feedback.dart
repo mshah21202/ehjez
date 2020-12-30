@@ -4,7 +4,9 @@ import 'package:ehjez/feedback.dart';
 class feedback extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.teal[300],
+    return Scaffold(resizeToAvoidBottomPadding: false,
+        resizeToAvoidBottomInset: false,
+        backgroundColor: Colors.teal[300],
     body:Builder(builder:(context) {
      return SafeArea(
           child: Container(
