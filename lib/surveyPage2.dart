@@ -35,6 +35,14 @@ List<String> answers=['لا','نعم'];
       'id': 'ID3',
       'question': 'هل كان لديك فحص إيجابي لفيروس كورونا؟'
     });
+    questionList.add({
+      'id': 'ID4',
+      'question': 'الحالة الإجتماعية؟'
+    });
+    questionList.add({
+      'id': 'ID4',
+      'question': 'هل لديك حساسية من أي شيء؟'
+    });
   }
 
   Widget build(BuildContext context) {

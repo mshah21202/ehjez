@@ -53,7 +53,7 @@ class databaseHelper {
       $columnQ1 INTEGER,
       $columnQ2 INTEGER,
       $columnQ3 INTEGER,
-      $columnStatus INTEGER DEFAULT 1
+      $columnStatus INTEGER DEFAULT 2
       )
       '''
     );

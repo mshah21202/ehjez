@@ -150,7 +150,7 @@ class infoscreen  extends StatelessWidget {
                                             secondurl();
                                           },
                                           child: Text(
-                                              "موقع الوزارة",
+                                              "موقع وزارة الصحة",
                                               textAlign: TextAlign.right,
                                               style: TextStyle(
                                                   fontFamily: 'ElMessiri',
