@@ -23,12 +23,12 @@ class _adminMainPageState extends State<adminMainPage> {
   Widget build(BuildContext context) {
      return Scaffold(
        backgroundColor: Colors.teal[300],
-      body: Stack(
+      body: SingleChildScrollView(child:Stack(
         children: [
           SafeArea(
             child: new Container(
             width: double.infinity,
-            height: double.infinity,
+            height: 860,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.bottomLeft,
@@ -87,7 +87,7 @@ class _adminMainPageState extends State<adminMainPage> {
           )
         ]
       ),
-     );
+     ));
   }
 }
 
@@ -112,11 +112,12 @@ class _createListViewState extends State<createListView> {
     bool isButtonDisabled;
     List values = widget.snapshot.data;
     return ListView.builder(
+      physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       scrollDirection: Axis.vertical,
       itemCount: values.length,
       itemBuilder: (BuildContext context, int index){
-        if (values[index].row[9] == 1){
+        if (values[index].row[8] == 1){
           isButtonDisabled = false;
         } else {
           isButtonDisabled = true;
@@ -192,7 +193,7 @@ class _createListViewState extends State<createListView> {
                         ),
                       ),
                     ),
-                    Icon((values[index].row[9] == 1) ? Icons.autorenew_sharp : ((values[index].row[9] == 2) ? Icons.check_circle : Icons.cancel), color: (values[index].row[9] == 1) ? Colors.teal[300] : ((values[index].row[9] == 2) ? Colors.green[800] : Colors.red[800]), size: 75,)
+                    Icon((values[index].row[8] == 1) ? Icons.autorenew_sharp : ((values[index].row[8] == 2) ? Icons.check_circle : Icons.cancel), color: (values[index].row[8] == 1) ? Colors.teal[300] : ((values[index].row[8] == 2) ? Colors.green[800] : Colors.red[800]), size: 75,)
                   ],
                 ),
               ),

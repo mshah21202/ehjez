@@ -82,6 +82,7 @@ Widget createListView(BuildContext context, AsyncSnapshot snapshot) {
   List values = snapshot.data;
   print(values);
   return ListView.builder(
+    physics: const NeverScrollableScrollPhysics(),
     shrinkWrap: true,
     scrollDirection: Axis.vertical,
     itemCount: values.length,
