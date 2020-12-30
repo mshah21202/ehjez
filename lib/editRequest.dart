@@ -1,4 +1,5 @@
 import 'package:ehjez/databaseHelper.dart';
+import 'package:ehjez/reviewRequest.dart';
 import 'package:flutter/material.dart';
 import "dart:ui";
 import 'package:ehjez/databaseHelper.dart';
@@ -320,6 +321,8 @@ class _editRequestState extends State<editRequest> {
                                     borderRadius: BorderRadiusDirectional.circular(20)
                                 ),
                                   child: RaisedButton(onPressed: () async {
+                                    int IndexID = widget.requestID+1;
+                                    print(IndexID.runtimeType);
                                     int nationality = groupValue - 1;
                                     String name = nameController.text;
                                     print("$name");
@@ -327,7 +330,8 @@ class _editRequestState extends State<editRequest> {
                                     String age = ageController.text;
                                     String phone = phoneController.text;
                                     if (_formKeys.formKey5.currentState.validate()){
-                                      int i = await databaseHelper.instance.insert({
+                                      int i = await databaseHelper.instance.update({
+                                        databaseHelper.columnID : IndexID,
                                         databaseHelper.columnName : '$name',
                                         databaseHelper.columnNational : '$national',
                                         databaseHelper.columnAge : '$age',
@@ -335,7 +339,7 @@ class _editRequestState extends State<editRequest> {
                                         databaseHelper.columnNationality : '$nationality'
                                       });
                                       int requestID = i;
-                                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => surveyPageSec(requestID)));
+                                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => reviewRequest()));
                                     };
 
                                   }, color: Color.fromRGBO(46,168,172, 1),
