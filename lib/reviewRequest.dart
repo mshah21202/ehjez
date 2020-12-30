@@ -87,7 +87,7 @@ Widget createListView(BuildContext context, AsyncSnapshot snapshot) {
     scrollDirection: Axis.vertical,
     itemCount: values.length,
     itemBuilder: (BuildContext context, int index){
-      if (values[index].row[8] == 2){
+      if (values[index].row[9] == 1){
         isButtonDisabled = false;
       } else {
         isButtonDisabled = true;
