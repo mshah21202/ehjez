@@ -55,6 +55,7 @@ class _adminReviewRequestState extends State<adminReviewRequest> {
                           minWidth: 150,
                           child: RaisedButton(
                             onPressed: () async {
+                              print(IndexID);
                               int result = await databaseHelper.instance.update({
                                 databaseHelper.columnID: IndexID+1,
                                 databaseHelper.columnStatus: 2

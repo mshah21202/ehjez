@@ -193,7 +193,7 @@ class _createListViewState extends State<createListView> {
                         ),
                       ),
                     ),
-                    Icon((values[index].row[8] == 1) ? Icons.autorenew_sharp : ((values[index].row[8] == 2) ? Icons.check_circle : Icons.cancel), color: (values[index].row[8] == 1) ? Colors.teal[300] : ((values[index].row[8] == 2) ? Colors.green[800] : Colors.red[800]), size: 75,)
+                    Icon((values[index].row[9] == 1) ? Icons.autorenew_sharp : ((values[index].row[9] == 2) ? Icons.check_circle : Icons.cancel), color: (values[index].row[9] == 1) ? Colors.teal[300] : ((values[index].row[9] == 2) ? Colors.green[800] : Colors.red[800]), size: 75,)
                   ],
                 ),
               ),
