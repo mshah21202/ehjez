@@ -1,4 +1,5 @@
 import 'package:ehjez/databaseHelper.dart';
+import 'package:ehjez/editRequest.dart';
 import 'package:flutter/material.dart';
 
 
@@ -113,7 +114,9 @@ Widget createListView(BuildContext context, AsyncSnapshot snapshot) {
                       borderRadius: BorderRadiusDirectional.circular(8)
                     ),
                       child: FlatButton(height: 50, minWidth: 100,
-                        onPressed: isButtonDisabled ? null : (){},
+                        onPressed: isButtonDisabled ? null : (){
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => editRequest(index)));
+                        },
                         child: Text("تعديل",
                           style: TextStyle(fontSize: 20,
                               color: Colors.white
