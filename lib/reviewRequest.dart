@@ -22,12 +22,12 @@ class _reviewRequestState extends State<reviewRequest>{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.teal[300],
-      body: Stack(
+      body: SingleChildScrollView(child: Stack(
           children: [
             SafeArea(
-              child: new Container(
+              child: new Container(height:2150,
                 width: double.infinity,
-                height: double.infinity,
+
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.bottomLeft,
@@ -71,7 +71,7 @@ class _reviewRequestState extends State<reviewRequest>{
             )
           ]
       ),
-    );
+    ));
   }
 }
 
@@ -85,7 +85,7 @@ Widget createListView(BuildContext context, AsyncSnapshot snapshot) {
     scrollDirection: Axis.vertical,
     itemCount: values.length,
     itemBuilder: (BuildContext context, int index){
-      if (values[index].row[9] == 1){
+      if (values[index].row[8] == 1){
         isButtonDisabled = false;
       } else {
         isButtonDisabled = true;
@@ -159,7 +159,7 @@ Widget createListView(BuildContext context, AsyncSnapshot snapshot) {
                       ),
                     ),
                   ),
-                  Icon((values[index].row[9] == 1) ? Icons.autorenew_sharp : ((values[index].row[9] == 2) ? Icons.check_circle : Icons.cancel), color: (values[index].row[9] == 1) ? Colors.teal[300] : ((values[index].row[9] == 2) ? Colors.green[800] : Colors.red[800]), size: 75,)
+                  Icon((values[index].row[8] == 1) ? Icons.autorenew_sharp : ((values[index].row[8] == 2) ? Icons.check_circle : Icons.cancel), color: (values[index].row[8] == 1) ? Colors.teal[300] : ((values[index].row[8] == 2) ? Colors.green[800] : Colors.red[800]), size: 75,)
                 ],
               ),
             ),

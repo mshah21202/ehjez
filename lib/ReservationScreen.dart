@@ -117,7 +117,7 @@ class Reservationscreen extends StatelessWidget {
                   child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                     Text("3.  إنتظر القبول", style: TextStyle(color: Colors.white, fontFamily: "ElMessiri", fontSize: 25),textDirection: TextDirection.rtl,),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(35, 0, 40, 0),
+                      padding: const EdgeInsets.fromLTRB(35, 0, 35, 0),
                       child: Icon(Icons.watch_later, color: Colors.white, size: 50,),
                     )
                   ],),
