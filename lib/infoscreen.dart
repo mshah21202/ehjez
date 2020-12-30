@@ -49,7 +49,8 @@ class infoscreen  extends StatelessWidget {
                       ),
 
                       ],
-                    ), Padding(
+                    ),
+                    Padding(
                         padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                         child: Image.asset(
                           "assets/Ehjez-Logo.png", width: 200, height: 200,)

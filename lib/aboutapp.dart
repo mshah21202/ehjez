@@ -9,7 +9,7 @@ class aboutApp extends StatelessWidget {
         backgroundColor: Colors.teal[300],
         body: SingleChildScrollView(child: SafeArea(
           child: Container(
-              height:920 ,
+              height:960 ,
               width: MediaQuery.of(context).size.width,
               child: Center(
                 child: new Container(
@@ -25,9 +25,22 @@ class aboutApp extends StatelessWidget {
                       ],
                     ),),
                   child: Padding(
-                      padding: const EdgeInsets.fromLTRB(5, 40, 10, 10),
+                      padding: const EdgeInsets.fromLTRB(0, 0, 10, 10),
                       child: Column( crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
+                          children: [Row(mainAxisAlignment: MainAxisAlignment.start,
+                            children: [Padding(
+                              padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+                              child: IconButton(
+                                  icon: Icon(Icons.arrow_back_ios_outlined),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  color: Colors.white, iconSize: 19
+                              ),
+                            ),
+
+                            ],
+                          ),
                             Container( padding: EdgeInsets.only(
                               bottom: 2,
                             ),
@@ -46,12 +59,13 @@ class aboutApp extends StatelessWidget {
 
 
 
-                            Container( padding: const EdgeInsets.fromLTRB(15, 20, 8, 10),
+                            Container( padding: const EdgeInsets.fromLTRB(6, 20, 3, 20),
 
                               child: Text(" ابتكر تطبيق احجز في سبيل تسهيل الحصول على لقاح كورونا عبر الهواتف الذكية, من خلال إمكانية حجز مواعيد لك ولعائلتك في المراكز الصحية والمستشفيات المعتمدة من وزارة الصحة لإعطاء اللقاح، وذلك في إطار دعم الجهود الحكومية لاحتواء جائحة كورونا، ويتميز هذا التطبيق بسهولة وسرعة الاستخدام وحفظ خصوصية المستخدم، بالإضافة لتوفير الوقت والجهد، كما يمكن أن يساهم أيضاً في تقليل نسبة الإصابة بالعدوى من المستشفيات، علاوةً على ذلك سيكون التسجيل فيه متاحًا للأفراد من مواطنين ووافدين، كما سيعمل على توفير أحدث التنبيهات والأخبار الطبيّة الصادرة من وزارة الصحة عن الفيروس وانتشاره وسبل الوقاية منه، وتجدر الإشارة إلى أن العمل على تطوير وتحديث هذا التطبيق يجري بشكل مستمر وذلك بإضافة المزيد من الخصائص والمزايا في التحديثات القادمة."
-                                  ,textAlign: TextAlign.center,style: TextStyle(
+                                  ,textDirection: TextDirection.rtl
+                                  ,textAlign: TextAlign.right,style: TextStyle(
                                     wordSpacing: 1,
-                                    fontSize: 17.0,
+                                    fontSize: 18.0,
 
                                     color: Colors.white,
                                     fontFamily: "ElMessiri",)  ),),
@@ -86,6 +100,7 @@ class aboutApp extends StatelessWidget {
                             Container( padding: const EdgeInsets.fromLTRB(15, 26, 8, 10),
 
                               child: Text("ينبغي الحرص على تعبئة البيانات الخاصة بالمستخدم بشكل كامل و صحيح، حيث تعتبر هذه المعلومات مهمة للغاية للكوادر الصحية، فقد تمكنهم من معرفة بعض المعلومات الأولية و المهمة جداً، وسيتطلب التطبيق إجراء تسجيل دخول، قبل البدء في عملية حجز موعد لأخذ اللقاح."
+                                  ,textDirection: TextDirection.rtl
                                   ,textAlign: TextAlign.right,style: TextStyle(
                                     wordSpacing: 1,
                                     fontSize: 17.0,

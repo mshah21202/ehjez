@@ -24,9 +24,22 @@ class privacyPolicy extends StatelessWidget {
     ],
     ),),
         child: Column( crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
+          children: [Row(mainAxisAlignment: MainAxisAlignment.start,
+            children: [Padding(
+              padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+              child: IconButton(
+                  icon: Icon(Icons.arrow_back_ios_outlined),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  color: Colors.white, iconSize: 19
+              ),
+            ),
 
-            Container( padding: const EdgeInsets.fromLTRB(0, 50, 70, 20),
+            ],
+          ),
+
+            Container( padding: const EdgeInsets.fromLTRB(0, 0, 70, 20),
 
             child: Text(" سياسة الخصوصية "
                 ,textAlign: TextAlign.center,style: TextStyle(

@@ -161,7 +161,8 @@ class _surveyPageState extends State<surveyPage> {
                             child: Stack(
                                 children: [Padding(
                                   padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                                  child: TextFormField(controller: nationalController,
+                                  child: TextFormField( keyboardType: TextInputType.number,
+                                    controller: nationalController,
                                     cursorColor: Colors.white,
                                     validator: (value){
                                     if (value.isEmpty){
@@ -212,7 +213,7 @@ class _surveyPageState extends State<surveyPage> {
                             child: Stack(
                                 children: [Padding(
                                   padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                                  child: TextFormField(controller: ageController,
+                                  child: TextFormField( keyboardType: TextInputType.number,controller: ageController,
                                     cursorColor: Colors.white,
                                     validator: (value){
                                     if (value.isEmpty){
@@ -223,7 +224,7 @@ class _surveyPageState extends State<surveyPage> {
                                     textAlign: TextAlign.end,
                                     showCursor: true,
                                     style: TextStyle(height: 3, color: Colors.white),
-                                    decoration: new InputDecoration(
+                                    decoration: new InputDecoration( counter: Offstage(),
                                       errorStyle: TextStyle(color: Colors.white),
                                       border: new OutlineInputBorder(borderSide: BorderSide(width: 0, style: BorderStyle.none),
                                           borderRadius: BorderRadius.circular(10.0)
@@ -243,7 +244,7 @@ class _surveyPageState extends State<surveyPage> {
                                       contentPadding: EdgeInsets.fromLTRB(0, 10, 15, 10),
                                       fillColor: Colors.grey[600].withOpacity(0.3),
                                       filled: true,
-                                    )
+                                    ), maxLength: 2
                                     ,),
                                 ),
                                   Padding(
@@ -262,7 +263,7 @@ class _surveyPageState extends State<surveyPage> {
                             child: Stack(
                                 children: [Padding(
                                   padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                                  child: TextFormField(controller: phoneController,
+                                  child: TextFormField( keyboardType: TextInputType.number,controller: phoneController,
                                     cursorColor: Colors.white,
                                     validator: (value){
                                     if (value.isEmpty){
@@ -273,7 +274,7 @@ class _surveyPageState extends State<surveyPage> {
                                     textAlign: TextAlign.end,
                                     showCursor: true,
                                     style: TextStyle(height: 3, color: Colors.white),
-                                    decoration: new InputDecoration(errorStyle: TextStyle(color: Colors.white),
+                                    decoration: new InputDecoration( counter: Offstage(),errorStyle: TextStyle(color: Colors.white),
                                       border: new OutlineInputBorder(borderSide: BorderSide(width: 0, style: BorderStyle.none),
                                           borderRadius: BorderRadius.circular(10.0)
                                       ),
@@ -292,7 +293,7 @@ class _surveyPageState extends State<surveyPage> {
                                       contentPadding: EdgeInsets.fromLTRB(0, 10, 15, 10),
                                       fillColor: Colors.grey[600].withOpacity(0.3),
                                       filled: true,
-                                    )
+                                    ), maxLength: 13
                                     ,),
                                 ),
                                   Padding(
