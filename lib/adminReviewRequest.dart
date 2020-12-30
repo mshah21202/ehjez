@@ -25,12 +25,12 @@ class _adminReviewRequestState extends State<adminReviewRequest> {
     );
     return Scaffold(
       backgroundColor: Colors.teal[300],
-      body: Stack(
+      body: SingleChildScrollView(child: Stack(
           children: [
             SafeArea(
               child: new Container(
                 width: double.infinity,
-                height: double.infinity,
+                height: 500,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.bottomLeft,
@@ -101,7 +101,7 @@ class _adminReviewRequestState extends State<adminReviewRequest> {
             )
           ]
       ),
-    );
+    ));
   }
 }
 
@@ -128,6 +128,7 @@ class _createListViewState extends State<createListView> {
     List values = widget.snapshot.data;
     print(values);
     return ListView.builder(
+      physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       scrollDirection: Axis.vertical,
       itemCount: values.length,
