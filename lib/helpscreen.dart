@@ -56,9 +56,22 @@ class _helpscreenState extends State<helpscreen> {
     ),),
 
       child: Column(
-        children: [
+        children: [Row(mainAxisAlignment: MainAxisAlignment.start,
+          children: [Padding(
+            padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+            child: IconButton(
+                icon: Icon(Icons.arrow_back_ios_outlined),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                color: Colors.white, iconSize: 19
+            ),
+          ),
+
+          ],
+        ),
           Center(
-          child: Padding(padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+          child: Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
             child: Text("اسألة متكررة",
                 textDirection: TextDirection.rtl,
                 textAlign: TextAlign.center,
@@ -418,7 +431,7 @@ class _helpscreenState extends State<helpscreen> {
                 borderRadius: BorderRadiusDirectional.circular(20)
             ),
               child: RaisedButton(onPressed: () {
-                customLaunch('tel: (06) 520 0230');
+                customLaunch('tel: 123456');
 
               }, color: Color.fromRGBO(46,168,172, 1),
                 child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -451,7 +464,7 @@ class _helpscreenState extends State<helpscreen> {
                 borderRadius: BorderRadiusDirectional.circular(20)
             ),
               child: RaisedButton(onPressed: () {
-                customLaunch('mailto:diwan@moh.gov.jo');
+                customLaunch('mailto:test123@gmail.com');
 
               }, color: Color.fromRGBO(46,168,172, 1),
                 child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
