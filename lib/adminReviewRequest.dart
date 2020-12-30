@@ -30,7 +30,7 @@ class _adminReviewRequestState extends State<adminReviewRequest> {
             SafeArea(
               child: new Container(
                 width: double.infinity,
-                height: 500,
+                height: MediaQuery.of(context).size.height,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.bottomLeft,
