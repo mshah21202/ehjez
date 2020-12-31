@@ -161,7 +161,7 @@ class _surveyPageState extends State<surveyPage> {
                             child: Stack(
                                 children: [Padding(
                                   padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                                  child: TextFormField( keyboardType: TextInputType.number,
+                                  child: TextFormField(
                                     controller: nationalController,
                                     cursorColor: Colors.white,
                                     validator: (value){

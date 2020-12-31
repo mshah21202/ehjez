@@ -42,43 +42,14 @@ class _adminMainPageState extends State<adminMainPage> {
         ),
           ),
           SafeArea(
-            child: Column(
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0,20,0,0),
-                  child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      ButtonTheme(
-                        height: 70,
-                        minWidth: 110,
-                        child: RaisedButton(
-                          onPressed: (){},
-                          child: Text("غير مراجع",
-                            style: TextStyle(color: Colors.white),),
-                          color: Colors.teal[800],
-                        ),
-                      ),
-                      ButtonTheme(
-                        height: 70,
-                        minWidth: 110,
-                        child: RaisedButton(
-                          onPressed: (){},
-                          child: Text("مقبول",
-                            style: TextStyle(color: Colors.white),),
-                          color: Colors.teal[800],
-                        ),
-                      ),
-                      ButtonTheme(
-                        height: 70,
-                        minWidth: 110,
-                        child: RaisedButton(
-                          onPressed: (){},
-                          child: Text("مرفوض",
-                            style: TextStyle(color: Colors.white),),
-                          color: Colors.teal[800],
-                        ),
-                      ),
-                    ],
+                  padding: const EdgeInsets.all(20.0),
+                  child: IconButton(
+                      icon: Icon(Icons.arrow_back_ios_outlined),
+                      onPressed: () {Navigator.pop(context);},
+                      color: Colors.white, iconSize: 19
                   ),
                 ),
                 futureBuilder
