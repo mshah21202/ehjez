@@ -51,8 +51,8 @@ class feedback extends StatelessWidget {
                                 ),
                               ),
                             ],),Container( padding: const EdgeInsets.fromLTRB(20, 27, 20, 20),
-                              child: TextField(maxLines: 1,
-                                decoration: InputDecoration(
+                              child: TextField(maxLines: 1, textAlign: TextAlign.end, textDirection: TextDirection.rtl,style: TextStyle(color: Colors.white),
+                                decoration: InputDecoration(labelStyle: TextStyle(color: Colors.white), hintStyle: TextStyle(color: Colors.white),
                                   enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.teal[500]),
                                       borderRadius: BorderRadius.all(Radius.circular(8.0))),
                                   focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white),
@@ -71,8 +71,8 @@ class feedback extends StatelessWidget {
 
                           ),
                           Container( padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
-                            child: TextField(maxLines: 10,
-                              decoration: InputDecoration(
+                            child: TextField(maxLines: 10, textAlign: TextAlign.end, textDirection: TextDirection.rtl, style: TextStyle(color: Colors.white),
+                              decoration: InputDecoration(labelStyle: TextStyle(color: Colors.white), hintStyle: TextStyle(color: Colors.white),
                                 enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.teal[500]),
                                     borderRadius: BorderRadius.all(Radius.circular(8.0))),
                                 focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white),

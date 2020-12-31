@@ -233,7 +233,7 @@ class _helpscreenState extends State<helpscreen> {
           ),
           Padding(padding: EdgeInsets.fromLTRB(10, 3,10, 0),
               child: Row(children: [Expanded(child: Visibility(visible: dVisible,
-                  child: Text("يمكن أن يسبب لقاح كوفيد 19 آثارًا جانبية طفيفة بعد الجرعة الأولى أو الثانية، وتشمل: الألم أو الاحمرار أو التورم في مكان حقن اللقاح، الحُمّى، الإرهاق، الصداع، القشعريرة، ألم العضلات والمفاصب",
+                  child: Text("يمكن أن يسبب لقاح كوفيد 19 آثارًا جانبية طفيفة بعد الجرعة الأولى أو الثانية، وتشمل: الألم أو الاحمرار أو التورم في مكان حقن اللقاح، الحُمّى، الإرهاق، الصداع، القشعريرة، ألم العضلات والمفاصل",
                     textDirection: TextDirection.rtl,
                     style: TextStyle(
                         color: Colors.white,
@@ -363,55 +363,12 @@ class _helpscreenState extends State<helpscreen> {
           ),
           Padding(padding: EdgeInsets.fromLTRB(10, 3,10, 0),
               child: Row(children: [Expanded(child: Visibility(visible: gVisible,
-                  child: Text("نعم، يمكن تعديل الطلب بعد التسجيل.",
-                    textDirection: TextDirection.rtl,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: "ElMessiri",
-                        fontSize: 15),)),)])),
-
-
-
-
-
-
-
-          Padding(
-            padding: const EdgeInsets.fromLTRB(15, 20, 15, 8),
-            child: ButtonTheme(shape: RoundedRectangleBorder(
-                borderRadius: BorderRadiusDirectional.circular(10)
-            ),
-              child: RaisedButton(onPressed: () {setState(() {hVisible = !hVisible;
-
-              });},
-                color: Colors.grey[600].withOpacity(0.4),
-                child: Row(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [Expanded(child:
-                  Text("ما هي فعالية لقاح كورونا وكم عدد جرعات التي ينبغي أن يأخذها الشخص؟",
-                    textDirection: TextDirection.rtl,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: "ElMessiri",
-                        fontSize: 15),),),
-
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
-                      child: Icon(Icons.add_circle_outline_outlined, color: Colors.white,),
-                    )
-                  ],)
-                ,),
-            ),
-          ),
-          Padding(padding: EdgeInsets.fromLTRB(10, 3,10, 0),
-              child: Row(children: [Expanded(child: Visibility(visible: hVisible,
                   child: Text("نعم، حتى بعد الموافقة على بدء حملات التطعيم باللقاح، يقول الخبراء ستبقى هناك ضرورة للاستمرار في ارتداء الكمامات والالتزام بمسافات التباعد الجسماني.",
                     textDirection: TextDirection.rtl,
                     style: TextStyle(
                         color: Colors.white,
                         fontFamily: "ElMessiri",
                         fontSize: 15),)),)])),
-
-
           Padding(
             padding: const EdgeInsets.fromLTRB(40, 20, 40, 0),
 
@@ -420,11 +377,6 @@ class _helpscreenState extends State<helpscreen> {
 
                 ],)
                 ,),
-
-
-
-
-
           Padding(
             padding: const EdgeInsets.fromLTRB(40, 20, 40, 0),
             child: ButtonTheme(shape: RoundedRectangleBorder(
