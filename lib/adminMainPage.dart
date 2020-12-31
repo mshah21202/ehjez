@@ -45,11 +45,22 @@ class _adminMainPageState extends State<adminMainPage> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: IconButton(
-                      icon: Icon(Icons.arrow_back_ios_outlined),
-                      onPressed: () {Navigator.pop(context);},
-                      color: Colors.white, iconSize: 19
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: IconButton(
+                            icon: Icon(Icons.arrow_back_ios_outlined),
+                            onPressed: () {Navigator.pop(context);},
+                            color: Colors.white, iconSize: 19
+                        ),
+                      ),
+                      Expanded(child: Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
+                        child: Row(children: [Text("الطلبات", style: TextStyle(fontSize: 25, color: Colors.white, fontFamily: "ElMessiri", fontWeight: FontWeight.bold),)], mainAxisAlignment: MainAxisAlignment.end,),
+                      ))
+                    ],
                   ),
                 ),
                 futureBuilder
